@@ -27,12 +27,92 @@
             <h1>
                 Analysis of International Football Games(1872-2018)
             </h1>
-            <!-- <h3>By US Law Enforcement</h3> -->
             <div>
-                In 2019, <b>998</b> people were fatally shot by US Police.
-                <br>This narrative takes you through the numbers for years 2015-2020 and their relation to certain
-                attributes.
-                <br>
+            	<p>
+                According to <a href='https://www.kaggle.com/martj42/international-football-results-from-1872-to-2017' target='_blank'>this dataset</a> published on Kaggle, between 1872 and 2018, <b>41586</b> international football matches were played. International matches means matches between national teams like Brazil, Italy, Japan, Egypt, etc. According to the owner of the dataset<br><center><i>“the matches are strictly men’s full internationals and the data does not include Olympic Games or matches where at least one of the teams was the nation’s B-team, U-23 or a league select team”.</i></center><br>Each row in the dataset represents a match. For each match, the dataset lists its date, the two teams participating in the match, the result of the match, the tournament، the country that hosted the match, and other info. The table below shows the first five rows of this dataset.
+                </p>
+                <table>
+<thead>
+  <tr>
+    <th>date</th>
+    <th>home_team</th>
+    <th>away_team</th>
+    <th>home_score</th>
+    <th>away_score</th>
+    <th>tournament</th>
+    <th>city</th>
+    <th>country</th>
+    <th>neutral</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>1872-11-30</td>
+    <td>Scotland</td>
+    <td>England</td>
+    <td>0</td>
+    <td>0</td>
+    <td>Friendly</td>
+    <td>Glasgow</td>
+    <td>Scotland</td>
+    <td>FALSE</td>
+  </tr>
+  <tr>
+    <td>1873-03-08</td>
+    <td>England</td>
+    <td>Scotland</td>
+    <td>4</td>
+    <td>2</td>
+    <td>Friendly</td>
+    <td>London</td>
+    <td>England</td>
+    <td>FALSE</td>
+  </tr>
+  <tr>
+    <td>1874-03-07</td>
+    <td>Scotland</td>
+    <td>England</td>
+    <td>2</td>
+    <td>1</td>
+    <td>Friendly</td>
+    <td>Glasgow</td>
+    <td>Scotland</td>
+    <td>FALSE<br></td>
+  </tr>
+  <tr>
+    <td>1875-03-06</td>
+    <td>England</td>
+    <td>Scotland</td>
+    <td>2</td>
+    <td>2</td>
+    <td>Friendly</td>
+    <td>London<br></td>
+    <td>England</td>
+    <td>FALSE<br></td>
+  </tr>
+  <tr>
+    <td>1876-03-04</td>
+    <td>Scotland</td>
+    <td>England</td>
+    <td>3</td>
+    <td>0</td>
+    <td>Friendly</td>
+    <td>Glasgow<br></td>
+    <td>Scotland</td>
+    <td>FALSE</td>
+  </tr>
+</tbody>
+				</table>
+				<p>This analysis presents interesting results stretching 140+ years for football lovers around the world. It presents the results using elegant visualizations that summarize thousands of rows of data into one picture. For the purposes of this analysis I've made some updates to the dataset that can be downloaded <a href='https://github.com/atbasu/atbasu.github.io/blob/master/international_football_results_1872-2018.xlsx' download>here</a></p>
+            </div>
+            <h2>Goals of the Analysis</h2>
+            <div>
+            	<p>The analysis will answer the following questions:</p>
+            	<ol>
+            		<li>Which teams played the largest number of matches throughout history?</li>
+            		<li>Which teams had the highest and lowest win/loss ratios over the years?</li>
+            		<li>Which teams scored the most number of goals?</li>
+            	</ol>
             </div>
             <svg id="dataviz_delay" width="100" height="50"></svg>
             <script type="text/javascript" src="libraries/header.js"></script>
