@@ -59,7 +59,7 @@ d3.csv("https://atbasu.github.io/test-age.csv", function(d, i, columns) {
     .selectAll("rect")
     .data(function(d) { return d; })
     .enter().append("rect")
-      .attr("x", function(d) { return x(d.data.State); })
+      .attr("x", function(d) { return x(d.data.Country); })
       .attr("y", function(d) { return y(d[1]); })
       .attr("height", function(d) { return y(d[0]) - y(d[1]); })
       .attr("width", x.bandwidth())
@@ -70,7 +70,7 @@ d3.csv("https://atbasu.github.io/test-age.csv", function(d, i, columns) {
       var xPosition = d3.mouse(this)[0] - 5;
       var yPosition = d3.mouse(this)[1] - 5;
       tooltip.attr("transform", "translate(" + xPosition + "," + yPosition + ")");
-      tooltip.select("text").text("test"+(d[1]-d[0]));
+      tooltip.select("text").text("test : "+(d[1]-d[0]));
     });
 
   g.append("g")
@@ -96,7 +96,7 @@ d3.csv("https://atbasu.github.io/test-age.csv", function(d, i, columns) {
     .selectAll("g")
     .data(keys.slice().reverse())
     .enter().append("g")
-      .attr("transform", function(d, i) { return "translate(0," + i * 20 + "),rotate(270)"; });
+      .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
 
   legend.append("rect")
       .attr("x", width - 19)
