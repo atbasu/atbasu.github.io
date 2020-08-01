@@ -1291,7 +1291,7 @@ var split_data = [{
     "home" : "192", 
     "away" : "269"
 }];*/
-var xData = ["home", "away"];
+//var xData = ["home", "away"];
 var margin = {top: 20, right: 50, bottom: 30, left: 50},
         width = 400 - margin.left - margin.right,
         height = 300 - margin.top - margin.bottom;
@@ -1319,7 +1319,7 @@ d3.csv("https://atbasu.github.io/games_split.csv", function(d, i, columns) {
   d.total = t;
   return d;
 }, function(error, data) {
-  if (error) throw error;
+  //if (error) throw error;
 
   var keys = data.columns.slice(1);
 
