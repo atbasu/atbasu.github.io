@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-
-<!-- Load d3.js -->
-<script src="https://d3js.org/d3.v4.js"></script>
+<head>
+        <meta charset="utf-8">
+        <link href="/d3-geomap/d3-geomap.css" rel="stylesheet">
+        <script src="https://d3js.org/d3.v4.js"></script>
+    </head>
 
 <!-- Create a div where the graph will take place -->
 <body onload='init()'>
 <!-- Create a div where the graph will take place -->
+<div class="d3-geomap" id="map"></div>
 <div id="my_dataviz"></div>
+<div id="tooltip"></div>
 
 <div align='center' class="card" style="background-color: transparent;">
         <button class="btn active nav-btn">Home</button>
@@ -20,9 +23,13 @@
 <script>
 async function init() {
 	// set the dimensions and margins of the graph
+var map = d3.geomap()
+    .geofile('/d3-geomap/topojson/world/countries.json')
+    .draw(d3.select('#map'));
+
 var margin = {top: 10, right: 10, bottom: 10, left: 10},
-  width = 445 - margin.left - margin.right,
-  height = 445 - margin.top - margin.bottom;
+  width = 1280 - margin.left - margin.right,
+  height = 800 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
 var svg = d3.select("#my_dataviz")
@@ -33,6 +40,9 @@ var svg = d3.select("#my_dataviz")
   .attr("transform",
         "translate(" + margin.left + "," + margin.top + ")");
 
+
+d3.select('#tooltip')
+.attr('style', 'position: absolute; opacity: 0;');
 // Read data
 d3.csv('https://atbasu.github.io/test.csv', function(data) {
 
@@ -62,22 +72,28 @@ console.log(root.leaves())
       .attr('width', function (d) { return d.x1 - d.x0; })
       .attr('height', function (d) { return d.y1 - d.y0; })
       .style("stroke", "black")
-      .style("fill", "#69b3a2");
+      .style("fill", "#69b3a2")
+      .on('mouseover', function(d) { d3.select('#tooltip').style('opacity', 1).text("Country :" + d.data.name + ", Games played :" + d.value) });
+
 
   // and to add the text labels
   svg
     .selectAll("text")
     .data(root.leaves())
     .enter()
-    .append("text")
-      .attr("x", function(d){ return d.x0+10})    // +10 to adjust position (more right)
-      .attr("y", function(d){ return d.y0+20})    // +20 to adjust position (lower)
+    .append("text")   
+      .attr("x", function(d){ return d.x0+5})    // +10 to adjust position (more right)
+      .attr("y", function(d){ return d.y0+5})    // +20 to adjust position (lower)
       .text(function(d){ return d.data.name})
-      .attr("font-size", "15px")
+      .attr("font-size", "7px")
       .attr("fill", "white")
+
 })
     
 }
 </script>
 </body>
+<script src="//unpkg.com/d3@5/dist/d3.min.js"></script>
+    <script src="//unpkg.com/topojson@3/dist/topojson.min.js"></script>
+    <script src="/d3-geomap/d3-geomap.min.js"></script>
 </html>
