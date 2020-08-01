@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CS 498 DV - Narrative Visualization Project - International Football Games(1872-2018)</title>
@@ -27,113 +34,104 @@
             <h1>
                 Analysis of International Football Games(1872-2018)
             </h1>
-            <div>
+            <div align='left'>
             	<p>
-                According to <a href='https://www.kaggle.com/martj42/international-football-results-from-1872-to-2017' target='_blank'>this dataset</a> published on Kaggle, between 1872 and 2018, <b>41586</b> international football matches were played. International matches means matches between national teams like Brazil, Italy, Japan, Egypt, etc. According to the owner of the dataset<br><center><i>“the matches are strictly men’s full internationals and the data does not include Olympic Games or matches where at least one of the teams was the nation’s B-team, U-23 or a league select team”.</i></center><br>Each row in the dataset represents a match. For each match, the dataset lists its date, the two teams participating in the match, the result of the match, the tournament، the country that hosted the match, and other info. The table below shows the first five rows of this dataset.
+                According to <a href='https://www.kaggle.com/martj42/international-football-results-from-1872-to-2017' target='_blank'>this dataset</a> published on Kaggle, between 1872 and 2018, <b>41586</b> international football matches were played. International matches means matches between national teams like Brazil, Italy, Japan, Egypt, etc. According to the owner of the dataset:<br><center><i>“the matches are strictly men’s full internationals and the data does not include Olympic Games or matches where at least one of the teams was the nation’s B-team, U-23 or a league select team”.</i></center></p>
+                <p>Each row in the dataset represents a match. For each match, the dataset lists its date, the two teams participating in the match, the result of the match, the tournament، the country that hosted the match, and other info. The table below shows the first five rows of this dataset.
                 </p>
-                <table>
+                <center><table class="tg">
 <thead>
   <tr>
-    <th>date</th>
-    <th>home_team</th>
-    <th>away_team</th>
-    <th>home_score</th>
-    <th>away_score</th>
-    <th>tournament</th>
-    <th>city</th>
-    <th>country</th>
-    <th>neutral</th>
+    <th class="tg-0lax">date</th>
+    <th class="tg-0lax">home_team</th>
+    <th class="tg-0lax">away_team</th>
+    <th class="tg-0lax">home_score</th>
+    <th class="tg-0lax">away_score</th>
+    <th class="tg-0lax">tournament</th>
+    <th class="tg-0lax">city</th>
+    <th class="tg-0lax">country</th>
+    <th class="tg-0lax">neutral</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td>1872-11-30</td>
-    <td>Scotland</td>
-    <td>England</td>
-    <td>0</td>
-    <td>0</td>
-    <td>Friendly</td>
-    <td>Glasgow</td>
-    <td>Scotland</td>
-    <td>FALSE</td>
+    <td class="tg-0lax">1872-11-30</td>
+    <td class="tg-0lax">Scotland</td>
+    <td class="tg-0lax">England</td>
+    <td class="tg-0lax">0</td>
+    <td class="tg-0lax">0</td>
+    <td class="tg-0lax">Friendly</td>
+    <td class="tg-0lax">Glasgow</td>
+    <td class="tg-0lax">Scotland</td>
+    <td class="tg-0lax">FALSE</td>
   </tr>
   <tr>
-    <td>1873-03-08</td>
-    <td>England</td>
-    <td>Scotland</td>
-    <td>4</td>
-    <td>2</td>
-    <td>Friendly</td>
-    <td>London</td>
-    <td>England</td>
-    <td>FALSE</td>
+    <td class="tg-0lax">1873-03-08</td>
+    <td class="tg-0lax">England</td>
+    <td class="tg-0lax">Scotland</td>
+    <td class="tg-0lax">4</td>
+    <td class="tg-0lax">2</td>
+    <td class="tg-0lax">Friendly</td>
+    <td class="tg-0lax">London</td>
+    <td class="tg-0lax">England</td>
+    <td class="tg-0lax">FALSE</td>
   </tr>
   <tr>
-    <td>1874-03-07</td>
-    <td>Scotland</td>
-    <td>England</td>
-    <td>2</td>
-    <td>1</td>
-    <td>Friendly</td>
-    <td>Glasgow</td>
-    <td>Scotland</td>
-    <td>FALSE<br></td>
+    <td class="tg-0lax">1874-03-07</td>
+    <td class="tg-0lax">Scotland</td>
+    <td class="tg-0lax">England</td>
+    <td class="tg-0lax">2</td>
+    <td class="tg-0lax">1</td>
+    <td class="tg-0lax">Friendly</td>
+    <td class="tg-0lax">Glasgow</td>
+    <td class="tg-0lax">Scotland</td>
+    <td class="tg-0lax">FALSE<br></td>
   </tr>
   <tr>
-    <td>1875-03-06</td>
-    <td>England</td>
-    <td>Scotland</td>
-    <td>2</td>
-    <td>2</td>
-    <td>Friendly</td>
-    <td>London<br></td>
-    <td>England</td>
-    <td>FALSE<br></td>
+    <td class="tg-0lax">1875-03-06</td>
+    <td class="tg-0lax">England</td>
+    <td class="tg-0lax">Scotland</td>
+    <td class="tg-0lax">2</td>
+    <td class="tg-0lax">2</td>
+    <td class="tg-0lax">Friendly</td>
+    <td class="tg-0lax">London<br></td>
+    <td class="tg-0lax">England</td>
+    <td class="tg-0lax">FALSE<br></td>
   </tr>
   <tr>
-    <td>1876-03-04</td>
-    <td>Scotland</td>
-    <td>England</td>
-    <td>3</td>
-    <td>0</td>
-    <td>Friendly</td>
-    <td>Glasgow<br></td>
-    <td>Scotland</td>
-    <td>FALSE</td>
+    <td class="tg-0lax">1876-03-04</td>
+    <td class="tg-0lax">Scotland</td>
+    <td class="tg-0lax">England</td>
+    <td class="tg-0lax">3</td>
+    <td class="tg-0lax">0</td>
+    <td class="tg-0lax">Friendly</td>
+    <td class="tg-0lax">Glasgow<br></td>
+    <td class="tg-0lax">Scotland</td>
+    <td class="tg-0lax">FALSE</td>
   </tr>
 </tbody>
-				</table>
+</table></center>
 				<p>This analysis presents interesting results stretching 140+ years for football lovers around the world. It presents the results using elegant visualizations that summarize thousands of rows of data into one picture. For the purposes of this analysis I've made some updates to the dataset that can be downloaded <a href='https://github.com/atbasu/atbasu.github.io/blob/master/international_football_results_1872-2018.xlsx' download>here</a></p>
             </div>
             <h2>Goals of the Analysis</h2>
-            <div>
-            	<p>The analysis will answer the following questions:</p>
+            <div align='left'>
+            	<p>The analysis will answer the following questions:
             	<ol>
             		<li>Which teams played the largest number of matches throughout history?</li>
             		<li>Which teams had the highest and lowest win/loss ratios over the years?</li>
             		<li>Which teams scored the most number of goals?</li>
-            	</ol>
+            	</ol></p>
             </div>
-            <svg id="dataviz_delay" width="100" height="50"></svg>
-            <script type="text/javascript" src="libraries/header.js"></script>
         </div>
     </div>
-
-
-    <div class="card" style="background-color: transparent;">
+    <div align='center' class="card" style="background-color: transparent;">
         <button class="btn active nav-btn">Home</button>
-        <button class="btn nav-btn">1</button>
-        <button class="btn nav-btn">2</button>
-        <button class="btn nav-btn">3</button>
-        <button class="btn nav-btn">4</button>
+        <button class="btn nav-btn">Games</button>
+        <button class="btn nav-btn">Wins/Losses</button>
+        <button class="btn nav-btn">Goals</button>
         <button class="btn" onclick="plusDivs(-1)">❮ Prev</button>
         <button class="btn" onclick="plusDivs(1)">Next ❯</button>
     </div>
-    <div style="text-align: center;font-size: small;">
-        <br />
-        <a href="https://github.com/washingtonpost/data-police-shootings">Data Source</a>
-    </div>
-
     <script>
         var slideIndex = 0;
         showDivs(slideIndex);
@@ -165,11 +163,6 @@
             document.documentElement.scrollTop = 0;
         }
     </script>
-    <!-- <script type="text/javascript" src="libraries/first.js"></script> -->
-    <!-- <script type="text/javascript" src="libraries/second.js"></script>
-  <script type="text/javascript" src="libraries/third.js"></script>
-  <script type="text/javascript" src="libraries/fourth.js"></script> -->
-
 
 </body>
 
