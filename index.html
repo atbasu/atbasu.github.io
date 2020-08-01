@@ -37,6 +37,27 @@
             <div align='left'>
             	<p>
                 According to <a href='https://www.kaggle.com/martj42/international-football-results-from-1872-to-2017' target='_blank'>this dataset</a> published on Kaggle, between 1872 and 2018, <b>41586</b> international football matches were played. International matches means matches between national teams like Brazil, Italy, Japan, Egypt, etc. According to the owner of the dataset:<br><center><i>“the matches are strictly men’s full internationals and the data does not include Olympic Games or matches where at least one of the teams was the nation’s B-team, U-23 or a league select team”.</i></center></p>
+                <p>This analysis presents interesting results stretching 140+ years for football lovers around the world. It presents the results using elegant visualizations that summarize thousands of rows of data into one picture. For the purposes of this analysis I've made some updates to the dataset that can be downloaded <a href='https://atbasu.github.io/international_football_results_1872-2018.xlsx' download>here</a></p>
+                </div>
+    </div>
+    <div align='center' class="card" style="background-color: transparent;">
+        <button class="btn active nav-btn">Home</button>
+        <button class="btn nav-btn">Games</button>
+        <button class="btn nav-btn">Wins/Losses</button>
+        <button class="btn nav-btn">Goals</button>
+        <button class="btn" onclick="plusDivs(-1)">❮ Prev</button>
+        <button class="btn" onclick="plusDivs(1)">Next ❯</button>
+    </div>
+    <div>
+    <h2>Goals of the Analysis</h2>
+            <div align='left'>
+            	<p>The analysis will answer the following questions:
+            	<ol>
+            		<li>Which teams played the largest number of matches throughout history?</li>
+            		<li>Which teams had the highest and lowest win/loss ratios over the years?</li>
+            		<li>Which teams scored the most number of goals?</li>
+            	</ol></p>
+            </div>
                 <p>Each row in the dataset represents a match. For each match, the dataset lists its date, the two teams participating in the match, the result of the match, the tournament، the country that hosted the match, and other info. The table below shows the first five rows of this dataset.
                 </p>
                 <center><table class="tg">
@@ -111,26 +132,7 @@
   </tr>
 </tbody>
 </table></center>
-				<p>This analysis presents interesting results stretching 140+ years for football lovers around the world. It presents the results using elegant visualizations that summarize thousands of rows of data into one picture. For the purposes of this analysis I've made some updates to the dataset that can be downloaded <a href='https://github.com/atbasu/atbasu.github.io/blob/master/international_football_results_1872-2018.xlsx' download>here</a></p>
             </div>
-            <h2>Goals of the Analysis</h2>
-            <div align='left'>
-            	<p>The analysis will answer the following questions:
-            	<ol>
-            		<li>Which teams played the largest number of matches throughout history?</li>
-            		<li>Which teams had the highest and lowest win/loss ratios over the years?</li>
-            		<li>Which teams scored the most number of goals?</li>
-            	</ol></p>
-            </div>
-        </div>
-    </div>
-    <div align='center' class="card" style="background-color: transparent;">
-        <button class="btn active nav-btn">Home</button>
-        <button class="btn nav-btn">Games</button>
-        <button class="btn nav-btn">Wins/Losses</button>
-        <button class="btn nav-btn">Goals</button>
-        <button class="btn" onclick="plusDivs(-1)">❮ Prev</button>
-        <button class="btn" onclick="plusDivs(1)">Next ❯</button>
     </div>
     <script>
         var slideIndex = 0;
