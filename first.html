@@ -40,7 +40,7 @@ var map = d3.choropleth()
     .legend(true)
     .unitId('iso3');
 
-d3.csv('https://atbasu.github.io/sp.pop.totl.csv').then(data => {
+d3.csv('https://atbasu.github.io/total_games.csv').then(data => {
     var selection = d3.select('#map').datum(data);
     map.draw(selection);
 });
