@@ -29,13 +29,13 @@ async function init() {
 //    .draw(d3.select('#map'));
 
 var format = function(d) {
-    d = d / 1000000;
-    return d3.format(',.02f')(d) + 'M';
+    d = d;
+    return d3.format(',.00f')(d);
 }    
 var map = d3.choropleth()
     .geofile('https://atbasu.github.io/geomap/topojson/world/countries.json')
     .colors(d3.schemeYlGnBu[9])
-    .column('YR2010')
+    .column('total')
     .format(format)
     .legend(true)
     .unitId('iso3');
