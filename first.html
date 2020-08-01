@@ -1319,7 +1319,7 @@ d3.csv("https://atbasu.github.io/games_split.csv", function(d, i, columns) {
   d.total = t;
   return d;
 }, function(error, data) {
-  //if (error) throw error;
+  if (error) throw error;
 
   var keys = data.columns.slice(1);
 

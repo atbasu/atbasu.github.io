@@ -1,95 +1,120 @@
-<!DOCTYPE html>
-<html lang="en">
+<div id="main">
+<svg width="960" height="500"></svg>
+</div>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script>
+// create the svg
+var svg = d3.select("svg"),
+    margin = {top: 20, right: 20, bottom: 30, left: 40},
+    width = +svg.attr("width") - margin.left - margin.right,
+    height = +svg.attr("height") - margin.top - margin.bottom,
+    g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Narrative Visualization-Fatal Shots</title>
-  <meta charset="UTF-8" />
-  <script type="text/javascript" src="libraries/d3.v4.js"></script>
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <style>
+// set x scale
+var x = d3.scaleBand()
+    .rangeRound([0, width])
+    .paddingInner(0.05)
+    .align(0.1);
 
-  </style>
-</head>
+// set y scale
+var y = d3.scaleLinear()
+    .rangeRound([height, 0]);
 
-<body>
-  <!-- Navbar -->
-  <div class="topnav" id="myTopnav" style="background-color: black;">
-    <div>
-      <br>
-    </div>
-  </div>
+// set the colors
+var z = d3.scaleOrdinal()
+    .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
 
-  <!-- Second Grid -->
-  <div class="row grids" style="text-align:center;display: block;" id="second-grid">
-    <h1>
-      NUMBERS BY STATE
-    </h1>
-    <div class="column left card">
-      <h3>
-        California, Texas and Florida have the highest number of deaths
-      </h3>
-      <p>
-        California, Texas and Florida have been consistently ranked as states with highest number of deaths.
-        Arizona, Colorado, Georia and Washington state are trailing the top 3. These states also have some of the
-        highest population in the country.
-      </p>
-    </div>
+// load the csv and create the chart
+d3.csv("https://atbasu.github.io/test-age.csv", function(d, i, columns) {
+  for (i = 1, t = 0; i < columns.length; ++i) t += d[columns[i]] = +d[columns[i]];
+  d.total = t;
+  return d;
+}, function(error, data) {
+  if (error) throw error;
 
-    <div class="column equal">
-      <label style="float: none;font-size: small;" for="country">Choose a year:
-        <select class="box" id="selectButton"></select>
-        <button class="btn" id="top25">Top half</button>
-        <button class="btn" id="bottom25">Bottom half</button>
-      </label>
-      <div id="second_dataViz" style="float: none;"></div>
-    </div>
-  </div>
+  var keys = data.columns.slice(1);
 
-  <script type="text/javascript" src="libraries/second.js"></script>
+  data.sort(function(a, b) { return b.total - a.total; });
+  x.domain(data.map(function(d) { return d.State; }));
+  y.domain([0, d3.max(data, function(d) { return d.total; })]).nice();
+  z.domain(keys);
 
-  <div align='center' class="card" style="background-color: transparent;">
-        <button class="btn active nav-btn">Home</button>
-        <button class="btn nav-btn">Games</button>
-        <button class="btn nav-btn">Wins/Losses</button>
-        <button class="btn nav-btn">Goals</button>
-        <button class="btn" onclick="plusDivs(-1)">❮ Prev</button>
-        <button class="btn" onclick="plusDivs(1)">Next ❯</button>
-    </div>
+  g.append("g")
+    .selectAll("g")
+    .data(d3.stack().keys(keys)(data))
+    .enter().append("g")
+      .attr("fill", function(d) { return z(d.key); })
+    .selectAll("rect")
+    .data(function(d) { return d; })
+    .enter().append("rect")
+      .attr("x", function(d) { return x(d.data.State); })
+      .attr("y", function(d) { return y(d[1]); })
+      .attr("height", function(d) { return y(d[0]) - y(d[1]); })
+      .attr("width", x.bandwidth())
+    .on("mouseover", function() { tooltip.style("display", null); })
+    .on("mouseout", function() { tooltip.style("display", "none"); })
+    .on("mousemove", function(d) {
+      console.log(d);
+      var xPosition = d3.mouse(this)[0] - 5;
+      var yPosition = d3.mouse(this)[1] - 5;
+      tooltip.attr("transform", "translate(" + xPosition + "," + yPosition + ")");
+      tooltip.select("text").text(d[1]-d[0]);
+    });
 
+  g.append("g")
+      .attr("class", "axis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(x));
 
-  <script>
-    var slideIndex = 2;
-    showDivs(slideIndex);
+  g.append("g")
+      .attr("class", "axis")
+      .call(d3.axisLeft(y).ticks(null, "s"))
+    .append("text")
+      .attr("x", 2)
+      .attr("y", y(y.ticks().pop()) + 0.5)
+      .attr("dy", "0.32em")
+      .attr("fill", "#000")
+      .attr("font-weight", "bold")
+      .attr("text-anchor", "start");
 
-    function plusDivs(n) {
-      showDivs(slideIndex += n);
-    }
+  var legend = g.append("g")
+      .attr("font-family", "sans-serif")
+      .attr("font-size", 10)
+      .attr("text-anchor", "end")
+    .selectAll("g")
+    .data(keys.slice().reverse())
+    .enter().append("g")
+      .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
 
-    function currentDiv(n) {
-      showDivs(slideIndex = n);
-    }
+  legend.append("rect")
+      .attr("x", width - 19)
+      .attr("width", 19)
+      .attr("height", 19)
+      .attr("fill", z);
 
-    function showDivs(n) {
+  legend.append("text")
+      .attr("x", width - 24)
+      .attr("y", 9.5)
+      .attr("dy", "0.32em")
+      .text(function(d) { return d; });
+});
 
-      var i;
-      // var x = document.getElementsByClassName("grids");
-      var length = 5;
-      var navBtns = document.getElementsByClassName("nav-btn");
-      for (i = 0; i < navBtns.length; i++) {
-        navBtns[i].className = navBtns[i].className.replace(" active", "");
-      }
-      if (n == 1) {
-        window.location.href = "first.html";
-      }
-      if (n == 3) {
-        window.location.href = "third.html";
-      }
-      navBtns[slideIndex].className += " active";
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-    }
-  </script>
-</body>
+  // Prep the tooltip bits, initial display is hidden
+  var tooltip = svg.append("g")
+    .attr("class", "tooltip")
+    .style("display", "none");
+      
+  tooltip.append("rect")
+    .attr("width", 60)
+    .attr("height", 20)
+    .attr("fill", "white")
+    .style("opacity", 0.5);
 
-</html>
+  tooltip.append("text")
+    .attr("x", 30)
+    .attr("dy", "1.2em")
+    .style("text-anchor", "middle")
+    .attr("font-size", "12px")
+    .attr("font-weight", "bold");
+
+</script>
