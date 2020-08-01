@@ -1,4 +1,3 @@
-<!-- Code from d3-graph-gallery.com -->
 <!DOCTYPE html>
 <meta charset="utf-8">
 
@@ -6,13 +5,9 @@
 <script src="https://d3js.org/d3.v4.js"></script>
 
 <!-- Create a div where the graph will take place -->
-<div class="grids" style="background-color:#e5e5e5;padding:15px;text-align:center;display: block;" id="header">
-	<h1>Analysis of Games</h1>
-	<div align='left'>
-		<p>Between 1872 and 2018, <b>41586</b> international football matches were played.</p>
-	</div>
-	<div id="my_dataviz"></div>
-</div>
+<body onload='init()'>
+<!-- Create a div where the graph will take place -->
+<div id="my_dataviz"></div>
 
 <div align='center' class="card" style="background-color: transparent;">
         <button class="btn active nav-btn">Home</button>
@@ -22,10 +17,9 @@
         <button class="btn" onclick="plusDivs(-1)">❮ Prev</button>
         <button class="btn" onclick="plusDivs(1)">Next ❯</button>
     </div>
-
 <script>
-
-// set the dimensions and margins of the graph
+async function init() {
+	// set the dimensions and margins of the graph
 var margin = {top: 10, right: 10, bottom: 10, left: 10},
   width = 445 - margin.left - margin.right,
   height = 445 - margin.top - margin.bottom;
@@ -40,7 +34,7 @@ var svg = d3.select("#my_dataviz")
         "translate(" + margin.left + "," + margin.top + ")");
 
 // Read data
-d3.csv('https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/data_hierarchy_1level.csv', function(data) {
+d3.csv('https://atbasu.github.io/test.csv', function(data) {
 
   // stratify the data: reformatting for d3.js
   var root = d3.stratify()
@@ -82,4 +76,8 @@ console.log(root.leaves())
       .attr("font-size", "15px")
       .attr("fill", "white")
 })
+    
+}
 </script>
+</body>
+</html>

@@ -1,8 +1,314 @@
 name,parent,value
 Origin,,
-grp1,Origin,12
-grp2,Origin,23
-grp3,Origin,11
-grp4,Origin,40
-grp5,Origin,30
-grp6,Origin,25
+Åland Islands,Origin,46
+Abkhazia,Origin,28
+Afghanistan,Origin,111
+Albania,Origin,332
+Alderney,Origin,19
+Algeria,Origin,505
+American Samoa,Origin,48
+Andalusia,Origin,13
+Andorra,Origin,164
+Angola,Origin,352
+Anguilla,Origin,61
+Antigua and Barbuda,Origin,196
+Arameans Suryoye,Origin,10
+Argentina,Origin,980
+Armenia,Origin,210
+Artsakh,Origin,11
+Aruba,Origin,120
+Asturias,Origin,1
+Australia,Origin,517
+Austria,Origin,778
+Azerbaijan,Origin,245
+Bahamas,Origin,36
+Bahrain,Origin,489
+Bangladesh,Origin,208
+Barawa,Origin,12
+Barbados,Origin,263
+Basque Country,Origin,57
+Belarus,Origin,250
+Belgium,Origin,768
+Belize,Origin,79
+Benin,Origin,260
+Bermuda,Origin,152
+Bhutan,Origin,81
+Bolivia,Origin,458
+Bonaire,Origin,21
+Bosnia and Herzegovina,Origin,220
+Botswana,Origin,279
+Brazil,Origin,981
+British Virgin Islands,Origin,91
+Brittany,Origin,12
+Brunei,Origin,73
+Bulgaria,Origin,672
+Burkina Faso,Origin,388
+Burma,Origin,341
+Burundi,Origin,188
+Cambodia,Origin,225
+Cameroon,Origin,534
+Canada,Origin,381
+Canary Islands,Origin,4
+Cape Verde,Origin,166
+Cascadia,Origin,7
+Catalonia,Origin,47
+Cayman Islands,Origin,91
+Central African Republic,Origin,96
+Central Spain,Origin,2
+Chad,Origin,115
+Chagos Islands,Origin,11
+Chameria,Origin,5
+Chile,Origin,760
+China PR,Origin,596
+Chinese Taipei,Origin,149
+Colombia,Origin,550
+Comoros,Origin,60
+Congo,Origin,375
+Cook Islands,Origin,43
+Corsica,Origin,9
+Costa Rica,Origin,604
+County of Nice,Origin,9
+Crimea,Origin,5
+Croatia,Origin,318
+Cuba,Origin,337
+Curaçao,Origin,332
+Cyprus,Origin,362
+Czech Republic,Origin,297
+Czechoslovakia,Origin,496
+Darfur,Origin,7
+Denmark,Origin,795
+Djibouti,Origin,88
+Dominica,Origin,182
+Dominican Republic,Origin,113
+DR Congo,Origin,462
+East Timor,Origin,51
+Ecuador,Origin,512
+Egypt,Origin,634
+El Salvador,Origin,501
+Ellan Vannin,Origin,17
+England,Origin,1009
+Equatorial Guinea,Origin,130
+Eritrea,Origin,72
+Estonia,Origin,467
+Eswatini,Origin,230
+Ethiopia,Origin,362
+Falkland Islands,Origin,29
+Faroe Islands,Origin,224
+Felvidék,Origin,8
+Fiji,Origin,221
+Finland,Origin,744
+Frøya,Origin,30
+France,Origin,840
+French Guiana,Origin,157
+Gabon,Origin,359
+Galicia,Origin,9
+Gambia,Origin,213
+Georgia,Origin,241
+German DR,Origin,298
+Germany,Origin,949
+Găgăuzia,Origin,3
+Ghana,Origin,600
+Gibraltar,Origin,98
+Gotland,Origin,30
+Gozo,Origin,6
+Greece,Origin,564
+Greenland,Origin,73
+Grenada,Origin,212
+Guadeloupe,Origin,236
+Guam,Origin,99
+Guatemala,Origin,442
+Guernsey,Origin,77
+Guinea,Origin,466
+Guinea-Bissau,Origin,147
+Guyana,Origin,264
+Haiti,Origin,449
+Hitra,Origin,19
+Honduras,Origin,515
+Hong Kong,Origin,389
+Hungary,Origin,928
+Iceland,Origin,448
+India,Origin,404
+Indonesia,Origin,553
+Iran,Origin,499
+Iraq,Origin,547
+Iraqi Kurdistan,Origin,27
+Isle of Man,Origin,49
+Isle of Wight,Origin,44
+Israel,Origin,428
+Italy,Origin,800
+Ivory Coast,Origin,565
+Jamaica,Origin,564
+Japan,Origin,627
+Jersey,Origin,82
+Jordan,Origin,392
+Kárpátalja,Origin,10
+Kabylia,Origin,6
+Kazakhstan,Origin,198
+Kenya,Origin,645
+Kernow,Origin,11
+Kiribati,Origin,11
+Kosovo,Origin,39
+Kuwait,Origin,564
+Kyrgyzstan,Origin,146
+Laos,Origin,163
+Latvia,Origin,393
+Lebanon,Origin,273
+Lesotho,Origin,248
+Liberia,Origin,247
+Libya,Origin,337
+Liechtenstein,Origin,198
+Lithuania,Origin,366
+Luxembourg,Origin,402
+Macau,Origin,128
+Madagascar,Origin,222
+Madrid,Origin,1
+Malawi,Origin,563
+Malaysia,Origin,602
+Maldives,Origin,159
+Mali,Origin,499
+Malta,Origin,397
+Manchukuo,Origin,3
+Martinique,Origin,304
+Matabeleland,Origin,5
+Mauritania,Origin,212
+Mauritius,Origin,250
+Mayotte,Origin,18
+Menorca,Origin,21
+Mexico,Origin,869
+Micronesia,Origin,7
+Moldova,Origin,234
+Monaco,Origin,12
+Mongolia,Origin,73
+Montenegro,Origin,107
+Montserrat,Origin,40
+Morocco,Origin,535
+Mozambique,Origin,304
+Myanmar,Origin,16
+Namibia,Origin,229
+Nepal,Origin,178
+Netherlands,Origin,784
+New Caledonia,Origin,227
+New Zealand,Origin,362
+Nicaragua,Origin,155
+Niger,Origin,205
+Nigeria,Origin,576
+Niue,Origin,2
+North Korea,Origin,340
+North Macedonia,Origin,237
+North Vietnam,Origin,24
+Northern Cyprus,Origin,34
+Northern Ireland,Origin,644
+Northern Mariana Islands,Origin,24
+Norway,Origin,804
+Occitania,Origin,18
+Oman,Origin,450
+Orkney,Origin,21
+Padania,Origin,43
+Pakistan,Origin,190
+Palau,Origin,2
+Palestine,Origin,186
+Panama,Origin,428
+Panjab,Origin,12
+Papua New Guinea,Origin,116
+Paraguay,Origin,716
+Parishes of Jersey,Origin,3
+Peru,Origin,623
+Philippines,Origin,232
+Poland,Origin,815
+Portugal,Origin,613
+Provence,Origin,17
+Puerto Rico,Origin,117
+Qatar,Origin,533
+Réunion,Origin,81
+Raetia,Origin,8
+Republic of Ireland,Origin,566
+Republic of St. Pauli,Origin,4
+Rhodes,Origin,18
+Romani people,Origin,3
+Romania,Origin,694
+Russia,Origin,694
+Rwanda,Origin,244
+Sápmi,Origin,26
+São Tomé and Príncipe,Origin,46
+Saare County,Origin,35
+Saarland,Origin,9
+Saint Helena,Origin,4
+Saint Kitts and Nevis,Origin,179
+Saint Lucia,Origin,199
+Saint Martin,Origin,44
+Saint Pierre and Miquelon,Origin,7
+Saint Vincent and the Grenadines,Origin,146
+Samoa,Origin,51
+San Marino,Origin,163
+Sark,Origin,4
+Saudi Arabia,Origin,623
+Scotland,Origin,781
+Senegal,Origin,529
+Serbia,Origin,275
+Seychelles,Origin,113
+Shetland,Origin,51
+Sierra Leone,Origin,253
+Silesia,Origin,8
+Singapore,Origin,556
+Sint Maarten,Origin,34
+Slovakia,Origin,291
+Slovenia,Origin,247
+Solomon Islands,Origin,170
+Somalia,Origin,107
+Somaliland,Origin,5
+South Africa,Origin,400
+South Korea,Origin,862
+South Ossetia,Origin,14
+South Sudan,Origin,43
+Spain,Origin,694
+Sri Lanka,Origin,201
+Sudan,Origin,397
+Suriname,Origin,348
+Surrey,Origin,1
+Sweden,Origin,1018
+Switzerland,Origin,797
+Syria,Origin,404
+Székely Land,Origin,23
+Tahiti,Origin,210
+Tajikistan,Origin,144
+Tamil Eelam,Origin,17
+Tanzania,Origin,531
+Thailand,Origin,639
+Tibet,Origin,13
+Timor-Leste,Origin,9
+Togo,Origin,386
+Tonga,Origin,56
+Trinidad and Tobago,Origin,665
+Tunisia,Origin,581
+Turkey,Origin,567
+Turkmenistan,Origin,138
+Turks and Caicos Islands,Origin,27
+Tuvalu,Origin,34
+Two Sicilies,Origin,4
+U.S. Virgin Islands,Origin,54
+Uganda,Origin,624
+Ukraine,Origin,267
+United Arab Emirates,Origin,521
+United Koreans in Japan,Origin,11
+United States,Origin,684
+Uruguay,Origin,884
+Uzbekistan,Origin,275
+Vanuatu,Origin,174
+Vatican City,Origin,6
+Venezuela,Origin,381
+Vietnam,Origin,202
+Vietnam Republic,Origin,153
+Wales,Origin,656
+Wallis Islands and Futuna,Origin,24
+Western Armenia,Origin,16
+Western Australia,Origin,29
+Western Isles,Origin,28
+Western Sahara,Origin,5
+Yemen,Origin,226
+Yemen DPR,Origin,24
+Ynys Môn,Origin,61
+Yorkshire,Origin,7
+Yugoslavia,Origin,480
+Zambia,Origin,718
+Zanzibar,Origin,205
+Zimbabwe,Origin,456
