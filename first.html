@@ -69,20 +69,7 @@ var map = d3.choropleth()
 d3.csv('https://atbasu.github.io/total_games.csv').then(data => {
     var selection = d3.select('#map').datum(data);
     map.draw(selection);
-});
-
-var map_svg = d3.select('#map').select('svg')
-var circle = map_svg.selectAll(".dots")
-  .data(topojson.feature(world, world.objects.countries).features)
-  .enter()
-  .append("circle")
-  .attr("r","6")
-  .attr("fill","black")
-  .attr("transform",function(d){                 
-    var p = projection(d3.geo.centroid(d)); //<-- centroid is the center of the path, projection maps it to pixel positions
-    return "translate("+p+")";
-  });
-		
+});	
 
 var margin = {top: 10, right: 10, bottom: 10, left: 10},
   width = 1280 - margin.left - margin.right,
