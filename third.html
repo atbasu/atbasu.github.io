@@ -7,11 +7,12 @@ body {
 .axis .domain {
   display: none;
 }
+circle {fill: lightblue; stroke: black;}
 </style>
 <head>
     <meta charset="utf-8">
-    <script src="https://d3js.org/d3.v4.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src='https://d3js.org/d3.v5.min.js'></script>
 </head>
 <body onload='init()'>
 <div class="container" id="container">
@@ -35,8 +36,44 @@ body {
     <button class="btn" onclick="plusDivs(-1)">❮ Prev</button>
     <button class="btn" onclick="plusDivs(1)">Next ❯</button>
 </div>
+<div id="goals">
+	<svg width="1280" height="1280"></svg>
+</div>
 <script>
 async function init() {
+	const data = await d3.csv('https://atbasu.github.io/cars2017.csv');
+	console.log(data);
+	var logXScale = d3.scaleLinear()
+		.domain([0,2700])
+		.range([0,1200]);
+	var logYScale = d3.scaleLog()
+		.domain([0,2700])
+		.range([1200,0]);
+	d3.select("#goals")
+		.select("svg")
+		.append('g')
+			.attr('transform','translate('+40+','+40+')')
+		.selectAll('circle')
+		.data(data)
+		.enter()
+		.append('circle')
+			.attr('cx',function(d,i) {return logXScale(d.AverageCityMPG);})
+			.attr('cy',function(d,i) {return logYScale(d.AverageHighwayMPG);})
+			.attr('r',function(d,i) {return 2+parseInt(d.EngineCylinders);});
+	var yAxis = d3.axisLeft(logYScale)
+					.tickFormat(d3.format("~s"))
+	d3.select('svg')
+  		.append('g')
+  			.attr('transform','translate('+40+','+40+')')
+  			.call(yAxis);
+  			
+  	var xAxis = d3.axisBottom(logXScale)
+  					.tickFormat(d3.format("~s"))
+  	d3.select('svg')
+  		.append('g')
+  			.attr('transform','translate('+40+','+1240+')')
+  			.call(xAxis);
+    
 
 }
     var slideIndex = 3;

@@ -1,147 +1,241 @@
 ﻿Make,Fuel,EngineCylinders,AverageHighwayMPG,AverageCityMPG
-Acura,Gasoline,4,35,25
-Acura,Gasoline,6,28,21
-Alfa Romeo,Gasoline,4,33,24
-Alfa Romeo,Gasoline,6,24,17
-Aston Martin,Gasoline,12,19,12
-Audi,Gasoline,4,30,23
-Audi,Gasoline,6,27,19
-Audi,Gasoline,8,26,17
-Audi,Gasoline,10,22,14
-Audi,Gasoline,4,32,24
-Bentley,Gasoline,8,22,13
-Bentley,Gasoline,12,20,12
-BMW,Diesel,4,41,30
-BMW,Diesel,6,29,23
-BMW,Electricity,0,109,133
-BMW,Gasoline,2,33,36
-BMW,Gasoline,3,29,28
-BMW,Gasoline,4,32,23
-BMW,Gasoline,6,28,19
-BMW,Gasoline,8,23,15
-BMW,Gasoline,12,20,13
-Buick,Gasoline,4,27,20
-Buick,Gasoline,4,31,23
-Buick,Gasoline,6,26,18
-Cadillac,Gasoline,4,30,22
-Cadillac,Gasoline,6,25,17
-Cadillac,Gasoline,8,21,14
-Cadillac,Gasoline,4,32,22
-Cadillac,Gasoline,6,26,18
-Cadillac,Gasoline,8,21,15
-Chevrolet,Diesel,4,29,21
-Chevrolet,Electricity,0,110,128
-Chevrolet,Gasoline,4,31,21
-Chevrolet,Gasoline,8,23,15
-Chevrolet,Gasoline,4,34,27
-Chevrolet,Gasoline,6,24,17
-Chevrolet,Gasoline,8,21,15
-Chrysler,Gasoline,8,25,16
-Chrysler,Gasoline,4,36,23
-Chrysler,Gasoline,6,29,20
-Dodge,Gasoline,8,24,15
-Dodge,Gasoline,8,23,14
-Dodge,Gasoline,10,19,12
-Dodge,Gasoline,4,25,19
-Dodge,Gasoline,6,27,18
-Ferrari,Gasoline,8,22,16
-Ferrari,Gasoline,12,16,12
-Fiat,Electricity,0,103,121
-Fiat,Gasoline,4,34,26
-Fiat,Gasoline,4,30,22
-Ford,Electricity,0,96,118
-Ford,Gasoline,4,25,19
-Ford,Gasoline,6,18,11
-Ford,Gasoline,8,21,14
-Ford,Gasoline,3,40,29
-Ford,Gasoline,4,31,24
-Ford,Gasoline,6,23,17
-Ford,Gasoline,8,22,15
-Genesis,Gasoline,6,24,17
-Genesis,Gasoline,8,23,15
-Genesis,Gasoline,6,27,17
-GMC,Diesel,4,29,21
-GMC,Gasoline,4,27,20
-GMC,Gasoline,6,23,17
-GMC,Gasoline,8,21,15
-Honda,Gasoline,4,38,30
-Honda,Gasoline,4,37,29
-Honda,Gasoline,6,28,19
-Hyundai,Electricity,0,122,150
-Hyundai,Gasoline,4,34,27
-Hyundai,Gasoline,6,25,18
-Infiniti,Gasoline,4,30,22
-Infiniti,Gasoline,6,27,20
-Infiniti,Gasoline,8,22,15
-Infiniti,Gasoline,4,27,25
-Jaguar,Diesel,4,39,30
-Jaguar,Gasoline,4,30,21
-Jaguar,Gasoline,6,26,18
-Jaguar,Gasoline,8,23,15
-Jeep,Gasoline,6,27,19
-Jeep,Gasoline,8,22,14
-Jeep,Gasoline,4,31,24
-Jeep,Gasoline,8,19,13
-Jeep,Gasoline,4,27,21
-Jeep,Gasoline,6,22,17
-Kia,Electricity,0,92,120
-Kia,Gasoline,8,23,15
-Kia,Gasoline,4,33,27
-Kia,Gasoline,6,25,18
-Lamborghini,Gasoline,10,21,14
-Lamborghini,Gasoline,12,17,10
-Land Rover,Diesel,6,28,22
-Land Rover,Gasoline,4,27,20
-Land Rover,Gasoline,6,23,17
-Land Rover,Gasoline,8,19,14
-Lexus,Gasoline,4,30,22
-Lexus,Gasoline,6,28,21
-Lexus,Gasoline,8,22,16
-Lexus,Gasoline,4,36,39
-Lexus,Gasoline,6,28,20
-Lincoln,Gasoline,4,29,23
-Lincoln,Gasoline,6,24,16
-Lotus,Gasoline,6,24,17
-Maserati,Gasoline,6,24,16
-Maserati,Gasoline,8,20,14
-Mazda,Gasoline,4,34,26
-Mazda,Gasoline,4,35,27
-McLaren Automotive,Gasoline,8,23,16
-Mercedes-Benz,Electricity,0,82,85
-Mercedes-Benz,Gasoline,4,30,23
-Mercedes-Benz,Gasoline,6,25,19
-Mercedes-Benz,Gasoline,8,22,16
-Mercedes-Benz,Gasoline,12,20,13
-MINI,Gasoline,4,33,24
-Mitsubishi,Electricity,0,102,121
-Mitsubishi,Gasoline,6,27,20
-Mitsubishi,Gasoline,3,42,35
-Mitsubishi,Gasoline,4,31,24
-Nissan,Electricity,0,101,124
-Nissan,Gasoline,4,31,26
-Nissan,Gasoline,6,26,18
-Nissan,Gasoline,4,33,26
-Nissan,Gasoline,6,25,18
-Nissan,Gasoline,8,20,14
-Porsche,Gasoline,4,27,21
-Porsche,Gasoline,6,26,19
-Porsche,Gasoline,8,21,14
-Ram,Gasoline,8,21,14
-Ram,Gasoline,4,28,21
-Ram,Gasoline,6,24,17
-Rolls-Royce,Gasoline,12,19,12
-Roush Performance,Gasoline,8,23,14
-smart,Gasoline,3,39,32
-Subaru,Gasoline,4,27,21
-Subaru,Gasoline,4,33,25
-Subaru,Gasoline,6,28,20
-Tesla,Electricity,0,98,92
-Toyota,Gasoline,4,30,23
-Toyota,Gasoline,4,35,32
-Toyota,Gasoline,6,25,20
-Toyota,Gasoline,8,18,13
-Volkswagen,Gasoline,4,28,21
-Volkswagen,Gasoline,4,33,24
-Volkswagen,Gasoline,6,25,18
-Volvo,Gasoline,4,29,22
-Volvo,Gasoline,4,32,23
+Aland Islands,ALA,14,88,47
+Afghanistan,AFG,30,112,114
+Albania,ALB,84,397,305
+Alderney,GBA,3,32,15
+Algeria,DZA,214,771,707
+American Samoa,ASM,5,164,36
+Andorra,AND,6,205,45
+Angola,AGO,121,393,400
+Anguilla,AIA,3,70,37
+Antigua and Barbuda,ATG,62,313,274
+Argentina,ARG,526,1684,1830
+Armenia,ARM,51,272,212
+Aruba,ABW,21,213,154
+Australia,AUS,257,997,1046
+Austria,AUT,323,1375,1382
+Azerbaijan,AZE,47,241,181
+Bahamas,BHS,11,65,48
+Bahrain,BHR,164,728,595
+Bangladesh,BGD,50,327,182
+Barbados,BRB,88,441,344
+Belarus,BLR,76,290,294
+Belgium,BEL,333,1382,1356
+Belize,BLZ,18,101,83
+Benin,BEN,59,344,267
+Bermuda,BMU,54,287,256
+Bhutan,BTN,8,107,48
+Bolivia,BOL,101,706,469
+Bonaire,BES,7,41,34
+Bosnia and Herzegovina,BIH,88,297,325
+Botswana,BWA,75,303,229
+Brazil,BRA,625,1874,2149
+British Virgin Islands,VGB,16,140,79
+Brittany,Origin,6,24,18
+Brunei,BRU,10,103,55
+Bulgaria,BGR,250,891,951
+Burkina Faso,BFA,123,484,447
+Burma,BUR,151,673,572
+Burundi,BDI,58,173,201
+Cambodia,KHM,48,423,252
+Cameroon,CMR,232,636,738
+Canada,CAN,134,427,441
+Cape Verde,CPV,58,199,171
+Cayman Islands,CYM,19,183,92
+Central African Republic,RCA,20,150,102
+Chad,TCD,25,155,106
+Chile,CHL,290,1194,1081
+China PR,CHN,287,1052,1079
+Colombia,COL,214,628,673
+Comoros,COM,9,49,39
+Congo,COG,129,506,476
+Cook Islands,COK,9,110,38
+Costa Rica,CRI,257,877,985
+Croatia,HRV,170,445,555
+Cuba,CUB,115,401,442
+Cyprus,CYP,69,571,320
+Czech Republic,CZE,160,439,533
+Czechoslovakia,CSK,222,828,915
+Denmark,DNK,356,1363,1416
+Djibouti,DJI,4,153,60
+Dominica,DMA,43,313,212
+Dominican Republic,DOM,44,196,178
+DR Congo,COD,182,541,701
+East Timor,TLS,4,64,42
+Ecuador,ECU,152,673,620
+Egypt,EGY,310,1090,1022
+El Salvador,SLV,167,802,613
+England,GBR,572,1596,2208
+Equatorial Guinea,GNQ,29,147,108
+Eritrea,ERI,11,44,48
+Estonia,EST,119,620,470
+Eswatini,SWZ,46,262,189
+Ethiopia,ETH,132,561,503
+Falkland Islands,FLK,6,59,28
+Faroe Islands,FRO,40,366,182
+Fiji,FJI,97,609,523
+Finland,FIN,190,1117,874
+France,FRA,417,1490,1493
+French Guiana,GUF,46,224,233
+Gabon,GAB,125,399,416
+Gambia,GMB,50,267,198
+Georgia,GEO,73,267,281
+Germany,DEU,695,2147,2630
+Ghana,GHA,286,784,972
+Gibraltar,GIB,30,204,142
+Greece,GRC,208,764,696
+Greenland,GRL,24,120,140
+Grenada,GRD,76,396,371
+Guadeloupe,GLP,97,407,397
+Guam,GUM,23,261,122
+Guatemala,GTM,154,676,606
+Guernsey,GGY,37,146,169
+Guinea,GIN,169,514,631
+Guinea-Bissau,GNB,40,192,141
+Guyana,GUY,81,414,334
+Haiti,HTI,186,649,705
+Honduras,HND,210,691,758
+Hong Kong,HKG,127,778,580
+Hungary,HUN,434,1606,1886
+Iceland,ISL,141,572,539
+India,IND,140,685,562
+Indonesia,IDN,208,1102,919
+Iran,IRN,272,785,925
+Iraq,IRQ,251,753,867
+Isle of Man,IMN,29,103,156
+Israel,ISR,149,701,621
+Italy,ITA,423,1236,1369
+Ivory Coast,CIV,281,774,904
+Jamaica,JAM,221,783,757
+Japan,JPN,302,1098,1105
+Jersey,JEY,55,169,181
+Jordan,JOR,137,469,476
+Kazakhstan,KAZ,48,243,208
+Kenya,KEN,243,1022,900
+Kiribati,KIR,0,73,7
+Kosovo,UNK,16,80,60
+Kuwait,KWT,237,884,876
+Kyrgyzstan,KGZ,44,168,160
+Laos,LAO,31,277,169
+Latvia,LVA,113,522,472
+Lebanon,LBN,75,366,314
+Lesotho,LSO,45,278,203
+Liberia,LBR,68,284,220
+Libya,LBY,123,476,427
+Liechtenstein,LIE,15,286,87
+Lithuania,LTU,99,394,381
+Luxembourg,LUX,34,682,244
+Macau,MAC,21,234,107
+Madagascar,MDG,85,323,293
+Malawi,MWI,198,792,678
+Malaysia,MYS,210,1041,908
+Maldives,MDV,47,290,220
+Mali,MLI,198,529,633
+Malta,MLT,47,565,241
+Martinique,MTQ,139,498,561
+Mauritania,MRT,37,170,155
+Mauritius,MUS,68,342,310
+Mayotte,MYT,3,30,29
+Mexico,MEX,439,1487,1514
+Micronesia,FSM,1,25,8
+Moldova,MDA,45,236,190
+Monaco,MCO,5,8,15
+Mongolia,MNG,19,89,96
+Montenegro,MNE,35,137,126
+Montserrat,MSR,9,69,41
+Morocco,MAR,247,672,750
+Mozambique,MOZ,99,351,323
+Myanmar,MMR,5,20,16
+Namibia,NAM,61,254,232
+Nepal,NPL,38,233,147
+Netherlands,NLD,398,1410,1618
+New Caledonia,NCL,120,542,614
+New Zealand,NZL,146,530,619
+Nicaragua,NIC,27,157,136
+Niger,NER,47,239,190
+Nigeria,NGA,267,707,856
+Niue,NIU,0,33,0
+North Korea,PRK,144,367,541
+North Macedonia,MKD,69,300,270
+Northern Ireland,GBR,165,927,674
+Northern Mariana Islands,MNP,2,49,18
+Norway,NOR,293,1204,1209
+Oman,OMN,167,658,583
+Orkney,GBR,5,45,23
+Pakistan,PAK,38,262,178
+Palau,PLW,0,25,4
+Palestine,PSE,50,232,256
+Panama,PAN,132,490,490
+Papua New Guinea,PNG,35,190,280
+Paraguay,PRY,255,697,942
+Peru,PER,201,737,767
+Philippines,PHL,65,331,275
+Poland,POL,351,1174,1371
+Portugal,PRT,296,948,1032
+Puerto Rico,PRI,22,186,119
+Qatar,QAT,221,839,763
+Republic of Ireland,IRL,220,818,779
+Romania,ROU,305,987,1135
+Russia,RUS,356,864,1199
+Rwanda,RWA,82,288,263
+Saint Helena,SHN,0,7,4
+Saint Kitts and Nevis,KNA,71,341,311
+Saint Lucia,LCA,66,322,286
+Saint Martin,MAF,14,70,51
+Saint Pierre and Miquelon,SPM,0,17,2
+Saint Vincent and the Grenadines,VCT,64,180,246
+Samoa,WSM,16,140,71
+San Marino,SMR,1,303,24
+Saudi Arabia,SAU,298,1006,987
+Scotland,GBR,371,1111,1352
+Senegal,SEN,233,493,690
+Serbia,SRB,124,290,422
+Seychelles,SYC,13,131,76
+Sierra Leone,SLE,78,227,241
+Singapore,SGP,168,983,731
+Sint Maarten,SXM,10,59,44
+Slovakia,SVK,119,365,424
+Slovenia,SVN,85,320,301
+Solomon Islands,SLB,72,344,383
+Somalia,SOM,10,136,56
+South Africa,ZAF,175,469,532
+South Korea,KOR,454,1279,1512
+South Sudan,SSD,8,50,32
+Spain,ESP,406,1111,1400
+Sri Lanka,LKA,40,300,200
+Sudan,SDN,133,427,448
+Suriname,SUR,153,563,673
+Sweden,SWE,500,1690,2015
+Switzerland,CHE,280,1263,1164
+Syria,SYR,150,447,588
+Tahiti,PYF,109,406,564
+Tajikistan,TJK,57,185,221
+Tanzania,TZA,146,683,599
+Thailand,THA,237,967,981
+Timor-Leste,TLS,1,16,11
+Togo,TGO,119,360,417
+Tonga,TON,14,99,67
+Trinidad and Tobago,TTO,290,936,1136
+Tunisia,TUN,243,765,832
+Turkey,TUR,220,724,754
+Turkmenistan,TKM,52,170,214
+Turks and Caicos Islands,TCA,6,41,24
+Tuvalu,TUV,5,51,35
+U.S. Virgin Islands,VIR,7,99,29
+Uganda,UGA,266,826,965
+Ukraine,UKR,123,304,376
+United Arab Emirates,ARE,208,815,734
+United States,USA,294,1134,994
+Uruguay,URY,382,935,1391
+Uzbekistan,UZB,120,330,452
+Vanuatu,VUT,56,232,341
+Vatican City,VAT,0,2,2
+Venezuela,VEN,92,460,389
+Vietnam,VNM,148,529,620
+Wales,GBR,208,917,822
+Wallis Islands and Futuna,WLF,5,14,23
+Western Sahara,ESH,2,17,11
+Yemen,YEM,45,275,215
+Yugoslavia,YUG,223,675,940
+Zambia,ZMB,328,813,1121
+Zimbabwe,ZWE,189,475,625
