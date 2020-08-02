@@ -22,10 +22,7 @@ body {
     <meta charset="UTF-8" />
     <script type="text/javascript" src="libraries/d3.v4.js"></script>
     <!-- <script type="text/javascript" src="libraries/d3-scale-chromatic.v1.min.js"></script> -->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <style>
-
-    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
@@ -164,9 +161,11 @@ body {
             for (i = 0; i < navBtns.length; i++) {
                 navBtns[i].className = navBtns[i].className.replace(" active", "");
             }
-
             if (n == 1) {
                 window.location.href = "first.html";
+            }
+            if (n == -1) {
+                window.location.href = "third.html";
             }
             navBtns[slideIndex].className += " active";
             document.body.scrollTop = 0;

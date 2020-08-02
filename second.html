@@ -7,10 +7,11 @@ body {
   display: none;
 }
 </style>
-
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <script src="https://d3js.org/d3.v4.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body onload='init()'>
 <div class="container" id="container">
@@ -41,15 +42,50 @@ body {
 </center>
 <div>
 	<h2>Which teams had the highest and lowest win/loss ratios over the years?</h2>
-	<p>From the map it can be seen that the top 5 countries to have played the most number of international matches are:
+	<p>From the chart above it can be seen that the top 5 countries with the highest win/loss ratio in international matches are:
 		<ol>
-			<li>Germany - 1260</li>
-			<li>Sweden - 1048</li>
-			<li>Brazil - 981</li>
-			<li>Argentina - 980</li>
-			<li>Hungary - 936</li>
+			<li>Brazil(BRA) :
+				<ul>
+					<li>Win Ratio = 3.98, i.e. almost 4 wins for every loss</li>
+					<li>Total Wins = 625</li>
+					<li>Total Losses = 157</li>
+					<li>Total Games = 782</li>
+				</ul>
+			</li>
+			<li>Jersey(JEY) :
+				<ul>
+					<li>Win Ratio = 3.44, i.e. more than 3 wins for every loss</li>
+					<li>Total Wins = 55</li>
+					<li>Total Losses = 16</li>
+					<li>Total Games = 71</li>
+				</ul>
+			</li>
+			<li>Spain(ESP) :
+				<ul>
+					<li>Win Ratio = 3.12, i.e. just over 3 wins for every loss</li>
+					<li>Total Wins = 406</li>
+					<li>Total Losses = 130</li>
+					<li>Total Games = 536</li>
+				</ul>
+			</li>
+			<li>Italy(ITA) <font color="red">*</font>:
+				<ul>
+					<li>Win Ratio = 2.76, i.e. just under 3 wins for every loss</li>
+					<li>Total Wins = 423</li>
+					<li>Total Losses = 153</li>
+					<li>Total Games = 576</li>
+				</ul>
+			</li>
+			<li>Iran(IRN) :
+				<ul>
+					<li>Win Ratio = 2.75, i.e. just under 3 wins for every loss</li>
+					<li>Total Wins = 272</li>
+					<li>Total Losses = 99</li>
+					<li>Total Games = 371</li>
+				</ul>
+			</li>
 		</ol>
-		Hover over countries to see their match count and double click on any point on the map to zoom in/out.
+		<small><font color="red">*</font>Note there's a minor kerfuffle in the data, namely Great Britain(GBR) is actually in the number 3 spot in the graph, but this is because the dataset contains information for countries Wales, Scotland, England and the other constituents of the UK, but all of them are associated with the same ISO code(GBR). This is also why GBR's bar is split.</small>
 	</p>
 </div>
 <center>
@@ -59,15 +95,46 @@ body {
 </center>
 <div>
 	<h2>Which teams have the most number of wins throughout history?</h2>
-	<p>From the map it can be seen that the top 5 countries to have played the most number of international matches are:
+	<p>From the chart above it can be seen that the top 5 countries to have won the most number of international matches are:
 		<ol>
-			<li>Germany - 1260</li>
-			<li>Sweden - 1048</li>
-			<li>Brazil - 981</li>
-			<li>Argentina - 980</li>
-			<li>Hungary - 936</li>
+			<li>Great Britain(GBR)<font color="red">*</font>:
+				<ul>
+					<li>Total Wins = 5+165+208+371</li>
+					<li>Away Wins = 1+59+85+156</li>
+					<li>Home Wins = 4+106+123+215</li>
+				</ul>
+			</li>
+			<li>Germany(DEU) :
+				<ul>
+					<li>Total Wins = 695</li>
+					<li>Away Wins = 394, in the top 5 Germany is the only country with more Away Wins</i>
+					<li>Home Wins = 301</li>
+				</ul>
+			</li>
+			<li>Brazil(BRA) :
+				<ul>
+					<li>Total Wins = 625</li>
+					<li>Away Wins = 221</li>
+					<li>Home Wins = 404</li>
+				</ul>
+			</li>
+			<li>Argentina(ARG) :
+				<ul>
+					<li>Total Wins = 526</li>
+					<li>Away Wins = 165</li>
+					<li>Home Wins = 361</li>
+				</ul>
+			</li>
+			
+			<li>Sweden(SWE) :
+				<ul>
+					<li>Total Wins = 500</li>
+					<li>Away Wins = 218</li>
+					<li>Home Wins = 282</li>
+				</ul>
+			</li>
 		</ol>
-		Hover over countries to see their match count and double click on any point on the map to zoom in/out.
+		What can also be seen from the graph is that the powerhouse nations of Football have considerably more victories than the others, but as you get into the middle of the graph the drop is more gradual.
 	</p>
 </div>
 <center>
@@ -76,27 +143,58 @@ body {
 	</div>
 </center>
 <div>
-	<h2>Which teams have the most number of wins throughout history?</h2>
-	<p>From the map it can be seen that the top 5 countries to have played the most number of international matches are:
+	<h2>Which teams have suffered the most number of losses throughout history?</h2>
+	<p>From the graph it can be seen that the 5 countries with the most number of losses in international matches are:
 		<ol>
-			<li>Germany - 1260</li>
-			<li>Sweden - 1048</li>
-			<li>Brazil - 981</li>
-			<li>Argentina - 980</li>
-			<li>Hungary - 936</li>
+			<li>Great Britain(GBR)<font color="red">*</font>:
+				<ul>
+					<li>Total Losses = 16+195+244+307+332</li>
+					<li>Away Losses = 8+114+159+188+194</li>
+					<li>Home Losses = 8+81+119+138</li>
+				</ul>
+			</li>
+			<li>Finland(FIN):
+				<ul>
+					<li>Total Losses = 400</li>
+					<li>Away Losses = 244</li>
+					<li>Home Losses = 156</li>
+				</ul>
+			</li>
+			<li>Switzerland(CHE) :
+				<ul>
+					<li>Total Losses = 344</li>
+					<li>Away Losses = 206</i>
+					<li>Home Losses = 138</li>
+				</ul>
+			</li>
+			<li>Norway(NOR) :
+				<ul>
+					<li>Total Losses = 328</li>
+					<li>Away Losses = 192</li>
+					<li>Home Losses = 136</li>
+				</ul>
+			</li>
+			
+			<li>Luxemburg(LUX) :
+				<ul>
+					<li>Total Losses = 317</li>
+					<li>Away Losses = 154</li>
+					<li>Home Losses = 163, Luxemburg has the ignominious distinction of being the only country in the bottom 5 with more home losses than away losses </li>
+				</ul>
+			</li>
 		</ol>
-		Hover over countries to see their match count and double click on any point on the map to zoom in/out.
 	</p>
 </div>
 <script>
 async function init() {
+
 // create the svg
-var wl_svg = d3.select("#win_split")
+var wl_svg = d3.select("#win_loss")
 				.select("svg"),
 				 margin = {top: 20, right: 20, bottom: 30, left: 40},
 				  width = +wl_svg.attr("width") - margin.left - margin.right,
 				  height = +wl_svg.attr("height") - margin.top - margin.bottom,
-				  g = wl_svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+				  wl_g = wl_svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 // set x scale
 var wl_x = d3.scaleBand()
@@ -110,24 +208,26 @@ var wl_y = d3.scaleLinear()
 
 // set the colors
 var wl_z = d3.scaleOrdinal()
-    .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+    .range(["#7b6888", "#d0743c"]);
 
 // load the csv and create the chart
 d3.csv("https://atbasu.github.io/games_wl.csv", function(d, i, columns) {
-  for (i = 1, t = 0; i < columns.length; ++i) t += d[columns[i]] = +d[columns[i]];
-  d.total = t;
+	for (i = 1, t = 0; i < columns.length; ++i) t += d[columns[i]] = +d[columns[i]];
+	d.total = t;
+	d.diff = d[columns[1]]-d[columns[2]];
+	d.ratio = d[columns[1]]/d[columns[2]];
   return d;
 }, function(error, data) {
   if (error) throw error;
 
   var wl_keys = data.columns.slice(1);
 
-  data.sort(function(a, b) { return b.total - a.total; });
+  data.sort(function(a, b) { console.log(b,a);return b.ratio - a.ratio; });
   wl_x.domain(data.map(function(d) { return d.Country; }));
   wl_y.domain([0, d3.max(data, function(d) { return d.total; })]).nice();
   wl_z.domain(wl_keys);
 
-  g.append("g")
+  wl_g.append("g")
     .selectAll("g")
     .data(d3.stack().keys(wl_keys)(data))
     .enter().append("g")
@@ -147,10 +247,10 @@ d3.csv("https://atbasu.github.io/games_wl.csv", function(d, i, columns) {
       var wl_xPosition = d3.mouse(this)[0] - 5;
       var wl_yPosition = d3.mouse(this)[1] - 5;
       wl_tooltip.attr("transform", "translate(" + wl_xPosition + "," + wl_yPosition + ")");
-      wl_tooltip.select("text").text(d.data.Country +" :\n"+(d[1]-d[0])+"/"+d.data.total);
+      wl_tooltip.select("text").text(d.data.Country+"("+d3.format(',.02f')(d.data.ratio)+") : "+(d[1]-d[0])+"/"+d.data.total);
     });
 
-  g.append("g")
+  wl_g.append("g")
       .attr("class", "axis")
       .attr("transform", "translate(0," + height + ")")
       .call(d3.axisBottom(wl_x))
@@ -160,7 +260,7 @@ d3.csv("https://atbasu.github.io/games_wl.csv", function(d, i, columns) {
       	.attr("dy", ".15em")
       	.attr("transform", "rotate(-65)");
 
-  g.append("g")
+  wl_g.append("g")
       .attr("class", "axis")
       .call(d3.axisLeft(wl_y).ticks(null, "s"))
     .append("text")
@@ -171,7 +271,7 @@ d3.csv("https://atbasu.github.io/games_wl.csv", function(d, i, columns) {
       .attr("font-weight", "bold")
       .attr("text-anchor", "start");
 
-  var wl_legend = g.append("g")
+  var wl_legend = wl_g.append("g")
       .attr("font-family", "sans-serif")
       .attr("font-size", 10)
       .attr("text-anchor", "end")
@@ -199,13 +299,13 @@ d3.csv("https://atbasu.github.io/games_wl.csv", function(d, i, columns) {
     .style("display", "none");
       
   wl_tooltip.append("rect")
-    .attr("width", 60)
+    .attr("width", 120)
     .attr("height", 20)
     .attr("fill", "white")
     .style("opacity", 0.5);
 
   wl_tooltip.append("text")
-    .attr("x", 30)
+    .attr("x", 60)
     .attr("dy", "1.2em")
     .style("text-anchor", "middle")
     .attr("font-size", "12px")
@@ -217,7 +317,7 @@ var win_svg = d3.select("#win_split")
 				 margin = {top: 20, right: 20, bottom: 30, left: 40},
 				  width = +win_svg.attr("width") - margin.left - margin.right,
 				  height = +win_svg.attr("height") - margin.top - margin.bottom,
-				  g = win_svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+				  win_g = win_svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 // set x scale
 var win_x = d3.scaleBand()
@@ -231,10 +331,11 @@ var win_y = d3.scaleLinear()
 
 // set the colors
 var win_z = d3.scaleOrdinal()
-    .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+	.range(["#7b6888", "#98abc5"]);
+//    .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
 
 // load the csv and create the chart
-d3.csv("https://atbasu.github.io/game_win.csv", function(d, i, columns) {
+d3.csv("https://atbasu.github.io/games_win.csv", function(d, i, columns) {
   for (i = 1, t = 0; i < columns.length; ++i) t += d[columns[i]] = +d[columns[i]];
   d.total = t;
   return d;
@@ -248,7 +349,7 @@ d3.csv("https://atbasu.github.io/game_win.csv", function(d, i, columns) {
   win_y.domain([0, d3.max(data, function(d) { return d.total; })]).nice();
   win_z.domain(win_keys);
 
-  g.append("g")
+  win_g.append("g")
     .selectAll("g")
     .data(d3.stack().keys(win_keys)(data))
     .enter().append("g")
@@ -268,10 +369,10 @@ d3.csv("https://atbasu.github.io/game_win.csv", function(d, i, columns) {
       var win_xPosition = d3.mouse(this)[0] - 5;
       var win_yPosition = d3.mouse(this)[1] - 5;
       win_tooltip.attr("transform", "translate(" + win_xPosition + "," + win_yPosition + ")");
-      win_tooltip.select("text").text(d.data.Country +" :\n"+(d[1]-d[0])+"/"+d.data.total);
+      win_tooltip.select("text").text(d.data.Country +" : "+(d[1]-d[0])+"/"+d.data.total);
     });
 
-  g.append("g")
+  win_g.append("g")
       .attr("class", "axis")
       .attr("transform", "translate(0," + height + ")")
       .call(d3.axisBottom(win_x))
@@ -281,7 +382,7 @@ d3.csv("https://atbasu.github.io/game_win.csv", function(d, i, columns) {
       	.attr("dy", ".15em")
       	.attr("transform", "rotate(-65)");
 
-  g.append("g")
+  win_g.append("g")
       .attr("class", "axis")
       .call(d3.axisLeft(win_y).ticks(null, "s"))
     .append("text")
@@ -292,7 +393,7 @@ d3.csv("https://atbasu.github.io/game_win.csv", function(d, i, columns) {
       .attr("font-weight", "bold")
       .attr("text-anchor", "start");
 
-  var win_legend = g.append("g")
+  var win_legend = win_g.append("g")
       .attr("font-family", "sans-serif")
       .attr("font-size", 10)
       .attr("text-anchor", "end")
@@ -333,12 +434,12 @@ d3.csv("https://atbasu.github.io/game_win.csv", function(d, i, columns) {
     .attr("font-weight", "bold");
 
 // create the svg
-var loss_svg = d3.select("#win_split")
+var loss_svg = d3.select("#loss_split")
 				.select("svg"),
 				 margin = {top: 20, right: 20, bottom: 30, left: 40},
 				  width = +loss_svg.attr("width") - margin.left - margin.right,
 				  height = +loss_svg.attr("height") - margin.top - margin.bottom,
-				  g = loss_svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+				  loss_g = loss_svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 // set x scale
 var loss_x = d3.scaleBand()
@@ -352,10 +453,10 @@ var loss_y = d3.scaleLinear()
 
 // set the colors
 var loss_z = d3.scaleOrdinal()
-    .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+    .range(["#d0743c","#ff8c00"]);
 
 // load the csv and create the chart
-d3.csv("https://atbasu.github.io/games_wl.csv", function(d, i, columns) {
+d3.csv("https://atbasu.github.io/games_loss.csv", function(d, i, columns) {
   for (i = 1, t = 0; i < columns.length; ++i) t += d[columns[i]] = +d[columns[i]];
   d.total = t;
   return d;
@@ -369,7 +470,7 @@ d3.csv("https://atbasu.github.io/games_wl.csv", function(d, i, columns) {
   loss_y.domain([0, d3.max(data, function(d) { return d.total; })]).nice();
   loss_z.domain(loss_keys);
 
-  g.append("g")
+  loss_g.append("g")
     .selectAll("g")
     .data(d3.stack().keys(loss_keys)(data))
     .enter().append("g")
@@ -392,7 +493,7 @@ d3.csv("https://atbasu.github.io/games_wl.csv", function(d, i, columns) {
       loss_tooltip.select("text").text(d.data.Country +" :\n"+(d[1]-d[0])+"/"+d.data.total);
     });
 
-  g.append("g")
+  loss_g.append("g")
       .attr("class", "axis")
       .attr("transform", "translate(0," + height + ")")
       .call(d3.axisBottom(loss_x))
@@ -402,7 +503,7 @@ d3.csv("https://atbasu.github.io/games_wl.csv", function(d, i, columns) {
       	.attr("dy", ".15em")
       	.attr("transform", "rotate(-65)");
 
-  g.append("g")
+  loss_g.append("g")
       .attr("class", "axis")
       .call(d3.axisLeft(loss_y).ticks(null, "s"))
     .append("text")
@@ -413,7 +514,7 @@ d3.csv("https://atbasu.github.io/games_wl.csv", function(d, i, columns) {
       .attr("font-weight", "bold")
       .attr("text-anchor", "start");
 
-  var loss_legend = g.append("g")
+  var loss_legend = loss_g.append("g")
       .attr("font-family", "sans-serif")
       .attr("font-size", 10)
       .attr("text-anchor", "end")
