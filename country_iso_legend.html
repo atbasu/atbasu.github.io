@@ -18,12 +18,11 @@
 var map = d3.choropleth()
     .geofile('https://atbasu.github.io/geomap/topojson/world/countries.json')
     .colors(d3.schemeYlGnBu[9])
-    .unitId('iso3')
-    .unitTile(d) => d.properties.name;
+    .unitId('iso3');
     
 
 
-d3.csv('https://atbasu.github.io/total_games.csv').then(data => {
+d3.csv('https://atbasu.github.io/test.csv').then(data => {
     var selection = d3.select('#map').datum(data);
     console.log(selection);
     map.draw(selection);
