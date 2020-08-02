@@ -49,7 +49,11 @@ circle {fill: lightblue; stroke: black;}
 			<li>Sweden</li>
 			<li>Hungary</li>
 		</ol>
-What is of interesting is that most countries
+Some points of interest:
+		<ul>
+			<li>Most countries seem to be clustered along the equatorial axis of goals scored and goals conceded</li>
+			<li>Countries which are in the same ballpark in terms of goals scored tend to have more wins if they have conceded fewer goals</li>
+		</ul>
 	</p>
 </div>
 <script>
@@ -70,7 +74,7 @@ var svg = d3.select("#goals")
           "translate(" + margin.left + "," + margin.top + ")");
 
 //Read the data
-d3.csv("https://atbasu.github.io/cars2017.csv", function(data) {
+d3.csv("https://atbasu.github.io/goals.csv", function(data) {
 
   // Add X axis
   var xScale = d3.scaleLinear()
@@ -103,12 +107,11 @@ d3.csv("https://atbasu.github.io/cars2017.csv", function(data) {
 
   // A function that change this tooltip when the user hover a point.
   // Its opacity is set to 1: we can now see it. Plus it set the text and position of tooltip depending on the datapoint (d)
-  var mouseover = function(d) {
+  var mousemove = function(d) {
     tooltip
       .style("opacity", 0.7)
   }
-
-  var mousemove = function(d) {
+  var mouseover = function(d) {
   	console.log(d,d3.mouse(this)[0],d3.mouse(this)[1])
     tooltip
       .html(d.Team+"<ol><li>Goals Scored : "+d.TotalGoalsScored+"</li><li>Goals Conceded : "+d.TotalGoalsConceded+"</li></ol>Wins : "+d.TotalWins)
@@ -147,6 +150,8 @@ d3.csv("https://atbasu.github.io/cars2017.csv", function(data) {
     .attr("y2", height);
    svg.append("text")
     .attr("dy", ".35em")
+    .style('fill', '#FF7F50')
+    .append("tspan")
     	.text("Teams to the left of the dashed line have")
     	.attr("x", 30)
     	.attr("y", 0)
@@ -156,6 +161,8 @@ d3.csv("https://atbasu.github.io/cars2017.csv", function(data) {
     	.attr("y", 20) 
    svg.append("text")
     .attr("dy", ".35em")
+    .style('fill', '#FF7F50')
+    .append("tspan")
     	.text("Teams to the right of the dashed line have")
     	.attr("x", width-320)
     	.attr("y", height-40)
