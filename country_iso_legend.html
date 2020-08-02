@@ -1,0 +1,33 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link href="https://atbasu.github.io/geomap/d3-geomap.css" rel="stylesheet">
+        <script src="https://unpkg.com/d3@5.16.0/dist/d3.min.js"></script>
+        <script src="https://unpkg.com/topojson@3/dist/topojson.min.js"></script>
+        <script src="https://atbasu.github.io/geomap/d3-geomap.min.js"></script>
+    </head>
+
+    <body>
+        <div class="d3-geomap" id="map"></div>
+    </body>
+<script>
+/*var map = d3.geomap()
+    .geofile('https://atbasu.github.io/geomap/topojson/world/countries.json')
+    .draw(d3.select('#map'));*/
+    
+var map = d3.choropleth()
+    .geofile('https://atbasu.github.io/geomap/topojson/world/countries.json')
+    .colors(d3.schemeYlGnBu[9])
+    .column('total')
+    .unitId('iso3');
+    
+
+
+d3.csv('https://atbasu.github.io/iso3_legend.csv').then(data => {
+    var selection = d3.select('#map').datum(data);
+    console.log(data);
+    map.draw(selection);
+});	
+
+</script>
+</html>

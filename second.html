@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="en">
 <style>
 body {
   font-family: 'Open Sans', sans-serif;
@@ -7,7 +8,6 @@ body {
   display: none;
 }
 </style>
-<html lang="en">
 <head>
     <meta charset="utf-8">
     <script src="https://d3js.org/d3.v4.min.js"></script>
@@ -35,13 +35,13 @@ body {
     <button class="btn" onclick="plusDivs(-1)">❮ Prev</button>
     <button class="btn" onclick="plusDivs(1)">Next ❯</button>
 </div>
+<div>
+<h2>Which teams had the highest and lowest win/loss ratios over the years?</h2>
 <center>
 	<div id="win_loss">
 		<svg width="1280" height="800"></svg>
 	</div>
 </center>
-<div>
-	<h2>Which teams had the highest and lowest win/loss ratios over the years?</h2>
 	<p>From the chart above it can be seen that the top 5 countries with the highest win/loss ratio in international matches are:
 		<ol>
 			<li>Brazil(BRA) :
@@ -88,13 +88,14 @@ body {
 		<small><font color="red">*</font>Note there's a minor kerfuffle in the data, namely Great Britain(GBR) is actually in the number 3 spot in the graph, but this is because the dataset contains information for countries Wales, Scotland, England and the other constituents of the UK, but all of them are associated with the same ISO code(GBR). This is also why GBR's bar is split.</small>
 	</p>
 </div>
+<div>
+	<h2>Which teams have the most number of wins throughout history?</h2>
 <center>
 	<div id="win_split">
 		<svg width="1280" height="800"></svg>
 	</div>
 </center>
-<div>
-	<h2>Which teams have the most number of wins throughout history?</h2>
+
 	<p>From the chart above it can be seen that the top 5 countries to have won the most number of international matches are:
 		<ol>
 			<li>Great Britain(GBR)<font color="red">*</font>:
@@ -137,13 +138,14 @@ body {
 		What can also be seen from the graph is that the powerhouse nations of Football have considerably more victories than the others, but as you get into the middle of the graph the drop is more gradual.
 	</p>
 </div>
+<div>
+	<h2>Which teams have suffered the most number of losses throughout history?</h2>
 <center>
 	<div id="loss_split">
 		<svg width="1280" height="800"></svg>
 	</div>
 </center>
-<div>
-	<h2>Which teams have suffered the most number of losses throughout history?</h2>
+
 	<p>From the graph it can be seen that the 5 countries with the most number of losses in international matches are:
 		<ol>
 			<li>Great Britain(GBR)<font color="red">*</font>:
@@ -542,13 +544,13 @@ d3.csv("https://atbasu.github.io/games_loss.csv", function(d, i, columns) {
     .style("display", "none");
       
   loss_tooltip.append("rect")
-    .attr("width", 60)
+    .attr("width", 80)
     .attr("height", 20)
     .attr("fill", "white")
     .style("opacity", 0.5);
 
   loss_tooltip.append("text")
-    .attr("x", 30)
+    .attr("x", 40)
     .attr("dy", "1.2em")
     .style("text-anchor", "middle")
     .attr("font-size", "12px")

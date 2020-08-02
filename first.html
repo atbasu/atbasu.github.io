@@ -261,6 +261,7 @@ footer {
         <link href="https://atbasu.github.io/geomap/d3-geomap.css" rel="stylesheet">
         <script src="https://unpkg.com/d3@5.16.0/dist/d3.min.js"></script>
         <script src="https://unpkg.com/topojson@3/dist/topojson.min.js"></script>
+        <script src="https://atbasu.github.io/geomap/d3-geomap.min.js"></script>
     </head>
 
 <!-- Create a div where the graph will take place -->
@@ -288,11 +289,11 @@ footer {
     </div>
 
 <!-- Create a div where the graph will take place -->
+<h2>Which teams played the largest number of matches throughout history?</h2>
 <center>
 	<div class="d3-geomap" id="map" style="width:1140px;height:593.75px;"></div>
 </center>
 <div>
-	<h2>Which teams played the largest number of matches throughout history?</h2>
 	<p>From the map it can be seen that the top 5 countries to have played the most number of international matches are:
 		<ol>
 			<li>Germany - 1260</li>
@@ -358,8 +359,5 @@ d3.csv('https://atbasu.github.io/total_games.csv').then(data => {
       document.documentElement.scrollTop = 0;
     }
 </script>
-  
-
 </body>
-    <script src="https://atbasu.github.io/geomap/d3-geomap.min.js"></script>
 </html>
