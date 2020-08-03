@@ -286,24 +286,32 @@ footer {
         <button class="btn nav-btn">Goals</button>
         <button class="btn" onclick="plusDivs(-1)">❮ Prev</button>
         <button class="btn" onclick="plusDivs(1)">Next ❯</button>
-    </div>
-
-<!-- Create a div where the graph will take place -->
-<h2>Which teams played the largest number of matches throughout history?</h2>
-<center>
-	<div class="d3-geomap" id="map" style="width:1140px;height:593.75px;"></div>
-</center>
-<div>
-	<p>From the map it can be seen that the top 5 countries to have played the most number of international matches are:
-		<ol>
-			<li>Germany - 1260</li>
-			<li>Sweden - 1048</li>
-			<li>Brazil - 981</li>
-			<li>Argentina - 980</li>
-			<li>Hungary - 936</li>
-		</ol>
-		Hover over countries to see their match count and double click on any point on the map to zoom in/out.
-	</p>
+</div>
+<div align="center">
+	<table>
+		<tr>
+			<h2>Which teams played the largest number of matches throughout history?</h2>
+		</tr>
+		<tr>
+			<td align="center" valign="top">
+				<div class="d3-geomap" id="map" style="width:1140px;height:593.75px;"></div>
+			</td>
+		</tr>
+		<tr>
+			<td align="left" valign="top">
+				<p style="color:black;font-size:18px;">From the map it can be seen that the top 5 countries to have played the most number of international matches are:
+				</p>
+				<ol>
+					<li>Germany - 1260</li>
+					<li>Sweden - 1048</li>
+					<li>Brazil - 981</li>
+					<li>Argentina - 980</li>
+					<li>Hungary - 936</li>
+				</ol>
+				<p style="font-size:10px;">Hover over countries to see their match count and double click on any point on the map to zoom in/out.
+				</p>
+			</td>
+		</tr>
 </div>
 
 <script>
