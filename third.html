@@ -36,25 +36,37 @@ circle {fill: lightblue; stroke: black;}
     <button class="btn" onclick="plusDivs(-1)">❮ Prev</button>
     <button class="btn" onclick="plusDivs(1)">Next ❯</button>
 </div>
-<div>
-<h2>Which teams scored the most number of goals?</h2>
-<center>
-	<div id="goals"></div>
-</center>
-	<p>From the chart above it can be seen that the top 5 most prolific goal scoring countries are:
-		<ol>
-			<li>Germany</li>
-			<li>England</li>
-			<li>Brazil</li>
-			<li>Sweden</li>
-			<li>Hungary</li>
-		</ol>
-Hover over each circle in the plot to see goal related details for each country. Some additional points of interest:
-		<ul>
-			<li>Most countries seem to be clustered along the equatorial axis of goals scored and goals conceded</li>
-			<li>Countries which are in the same ballpark in terms of goals scored tend to have more wins if they have conceded fewer goals</li>
-		</ul>
-	</p>
+<div align="center">
+	<table>
+  		<tr>
+  			<td>
+  				<h2>Which teams scored the most number of goals?</h2>
+  			</td>
+  		</tr>
+  		<tr>
+  			<td align="center" valign="top">
+    			<div id="goals"></div>
+    		</td>
+    	</tr>
+  		<tr>
+    		<td align="left" valign="top">
+    			<p style="color:black;font-size:18px;">From the chart above it can be seen that the top 5 most prolific goal scoring countries are:</p>
+    			<ol>
+					<li>Germany</li>
+					<li>England</li>
+					<li>Brazil</li>
+					<li>Sweden</li>
+					<li>Hungary</li>
+				</ol>
+				<p style="font-size:10px;">Note 1: Hover over each circle in the plot to see goal related details for each country.</p>
+				<p style="color:black;font-size:18px;">Some additional points of interest:</p>
+				<ul>
+					<li>Most countries seem to be clustered along the equatorial axis of goals scored vs goals conceded</li>
+					<li>Countries which are in the same ballpark in terms of goals scored tend to have more wins if they have conceded fewer goals</li>
+				</ul>
+    		</td>
+    	</tr>
+    </table>
 </div>
 <script>
 async function init() {
@@ -140,7 +152,7 @@ d3.csv("https://atbasu.github.io/goals.csv", function(data) {
     .on("mousemove", mousemove )
     .on("mouseleave", mouseleave );
   svg.append('line')
-    .style("stroke", "#FF7F50")
+    .style("stroke", "grey")
     .style("stroke-width", 2)
     .style("stroke-dasharray", ("3, 3"))
     .style("stroke-opacity", 0.9)
@@ -148,6 +160,13 @@ d3.csv("https://atbasu.github.io/goals.csv", function(data) {
     .attr("y1", 0)
     .attr("x2", 0)
     .attr("y2", height);
+
+  svg.append("text")
+    .attr("dy", ".35em")
+    .attr("transform", "translate(900,80) rotate(-45)")
+    .style('fill', 'grey')
+    .text("Goal Equator");
+
    svg.append("text")
     .attr("dy", ".35em")
     .style('fill', '#FF7F50')
@@ -161,7 +180,7 @@ d3.csv("https://atbasu.github.io/goals.csv", function(data) {
     	.attr("y", 20) 
    svg.append("text")
     .attr("dy", ".35em")
-    .style('fill', '#FF7F50')
+    .style('fill', 'green')
     .append("tspan")
     	.text("Teams to the right of the dashed line have")
     	.attr("x", width-320)
@@ -170,6 +189,23 @@ d3.csv("https://atbasu.github.io/goals.csv", function(data) {
     	.text("scored more goals than they have conceded")
     	.attr("x", width-320)
     	.attr("y", height-20)
+    svg.append("rect")
+    	.attr("x", 30)
+    	.attr("y", 30)
+    	.attr("height", 130)
+    	.attr("width", 380)
+    	.style("stroke-width", 2)
+    	.style("stroke-dasharray", ("3, 3"))
+    	.style("stroke", "green")
+    	.style('fill', "green")
+    	.attr("fill-opacity", 0.2)
+    	.attr("transform", "translate(600,380) rotate(-45)");
+    svg.append("text")
+    	.attr("dy", ".35em")
+    	.attr("transform", "translate(700,335) rotate(-45)")
+    	.style('fill', 'green')
+    	.text("Dominant teams include all powerhouses");
+
 })
 }
     var slideIndex = 3;

@@ -36,13 +36,16 @@ body {
     <button class="btn" onclick="plusDivs(1)">Next ❯</button>
 </div>
 <div>
-<h2>Which teams had the highest and lowest win/loss ratios over the years?</h2>
-<center>
-	<div id="win_loss">
-		<svg width="1280" height="800"></svg>
-	</div>
-</center>
-	<p>From the chart above it can be seen that the top 5 countries with the highest win/loss ratio in international matches are:
+
+<table>
+  <tr>
+  	<td colspan="2">
+  		<h2>Which teams had the highest and lowest win/loss ratios over the years?</h2>
+  	</td>
+  </tr>
+  <tr>
+    <td align="left" valign="top">
+    	<p style="color:black;font-size:18px;">From the chart to the right it can be seen that the top 5 countries with the highest win/loss ratio in international matches are:</p>
 		<ol>
 			<li>Brazil(BRA) :
 				<ul>
@@ -85,18 +88,28 @@ body {
 				</ul>
 			</li>
 		</ol>
-		<small><font color="red">*</font>Note there's a minor kerfuffle in the data, namely Great Britain(GBR) is actually in the number 3 spot in the graph, but this is because the dataset contains information for countries Wales, Scotland, England and the other constituents of the UK, but all of them are associated with the same ISO code(GBR). This is also why GBR's bar is split.</small>
-	</p>
-</div>
-<div>
-	<h2>Which teams have the most number of wins throughout history?</h2>
-<center>
-	<div id="win_split">
-		<svg width="1280" height="800"></svg>
-	</div>
-</center>
-
-	<p>From the chart above it can be seen that the top 5 countries to have won the most number of international matches are:
+		<p style="font-size:10px;">
+			<font color="red">*</font>Note 1 : there's a minor kerfuffle in the data, namely Great Britain(GBR) is actually in the number 3 spot in the graph, but this is because the dataset contains information for countries Wales, Scotland, England and the other constituents of the UK, but all of them are associated with the same ISO code(GBR). This is also why GBR's bar is split.
+		</p>
+		<p style="font-size:10px;">Note 2 : Hovering over each stacked section of each chart provides details for review.
+		</p>
+		<p style="color:black;font-size:18px;"> While Brazil is the only powerhouse that makes the top 5, it's clear that the experience the top 5 most prolific international teams have allows them to win more games than they lose and the teams are mostly clustered in the left corner of this sorted chart.
+		</p>
+	</td>
+    <td align="center" valign="top">
+    	<div id="win_loss">
+    			<svg width="1280" height="800">
+    			</svg>
+    		</div>
+    </td>
+  <tr>
+  	<td colspan="2">
+  		<h2>Which teams have the most number of wins throughout history?</h2>
+  	</td>
+  </tr>
+  <tr>    
+    <td align="left" valign="top">
+    	<p style="color:black;font-size:18px;">From the chart to the right it can be seen that the top 5 countries to have won the most number of international matches are:</p>		
 		<ol>
 			<li>Great Britain(GBR)<font color="red">*</font>:
 				<ul>
@@ -135,18 +148,24 @@ body {
 				</ul>
 			</li>
 		</ol>
-		What can also be seen from the graph is that the powerhouse nations of Football have considerably more victories than the others, but as you get into the middle of the graph the drop is more gradual.
-	</p>
-</div>
-<div>
-	<h2>Which teams have suffered the most number of losses throughout history?</h2>
-<center>
-	<div id="loss_split">
-		<svg width="1280" height="800"></svg>
-	</div>
-</center>
-
-	<p>From the graph it can be seen that the 5 countries with the most number of losses in international matches are:
+		<p style="color:black;font-size:18px;">
+		4/5 powerhouse nations top this list and it's pretty evident from the graph that theses teams have considerably more victories than the others, but as you get into the middle of the graph the drop had a more gradual spread.
+		</p>
+	</td>
+    <td align="center" valign="top">
+    	<div id="win_split">
+			<svg width="1280" height="800"></svg>
+		</div>
+    </td>
+  </tr>
+  <tr>
+  	<td colspan="2">
+  		<h2>Which teams have suffered the most number of losses throughout history?</h2>
+  	</td>
+  </tr>
+  <tr>    
+    <td align="left" valign="top">
+    	<p style="color:black;font-size:18px;">From the graph it can be seen that the 5 countries with the most number of losses in international matches are:</p>:</p>		
 		<ol>
 			<li>Great Britain(GBR)<font color="red">*</font>:
 				<ul>
@@ -185,7 +204,17 @@ body {
 				</ul>
 			</li>
 		</ol>
-	</p>
+		<p style="color:black;font-size:18px;">
+		While none of the powerhouses make this ignominious list, 3/5 of them are not very far behind. The European powerhouses seem to have lost quite a few matches given the frequency of their play, however the south american powerhouses are comfortably in the middle when it comes to the number of losses, indicating their clear dominance over the european powerhouses.
+		</p>
+	</td>
+    <td align="center" valign="top">
+    	<div id="loss_split">
+			<svg width="1280" height="800"></svg>
+		</div>
+    </td>
+  </tr>
+</table>
 </div>
 <script>
 async function init() {
@@ -224,7 +253,7 @@ d3.csv("https://atbasu.github.io/games_wl.csv", function(d, i, columns) {
 
   var wl_keys = data.columns.slice(1);
 
-  data.sort(function(a, b) { console.log(b,a);return b.ratio - a.ratio; });
+  data.sort(function(a, b) { /*console.log(b,a);*/return b.ratio - a.ratio; });
   wl_x.domain(data.map(function(d) { return d.Country; }));
   wl_y.domain([0, d3.max(data, function(d) { return d.total; })]).nice();
   wl_z.domain(wl_keys);
@@ -244,8 +273,8 @@ d3.csv("https://atbasu.github.io/games_wl.csv", function(d, i, columns) {
     .on("mouseover", function() { wl_tooltip.style("display", null); })
     .on("mouseout", function() { wl_tooltip.style("display", "none"); })
     .on("mousemove", function(d) {
-      console.log(d.data);
-      console.log(wl_keys);
+      //console.log(d.data);
+      //console.log(wl_keys);
       var wl_xPosition = d3.mouse(this)[0] - 5;
       var wl_yPosition = d3.mouse(this)[1] - 5;
       wl_tooltip.attr("transform", "translate(" + wl_xPosition + "," + wl_yPosition + ")");
@@ -312,6 +341,127 @@ d3.csv("https://atbasu.github.io/games_wl.csv", function(d, i, columns) {
     .style("text-anchor", "middle")
     .attr("font-size", "12px")
     .attr("font-weight", "bold");
+
+//add Brazil highlights
+wl_svg.append('circle')
+    .attr("cx", 48 )
+    .attr("cy", 185 )
+    .attr("r", 5)
+    .attr('fill', 'green')
+    .attr('fill-opacity', 0.5);
+wl_svg.append('line')
+    .style("stroke", "green")
+    .style("stroke-width", 2)
+    .style("stroke-dasharray", ("3, 3"))
+    .style("stroke-opacity", 0.9)
+    .attr("x1", 48)
+    .attr("y1", 185)
+    .attr("x2", 900)
+    .attr("y2", 140); 
+wl_svg.append("text")
+    .attr("dy", ".35em")
+    .style('fill', 'green')
+    .append("tspan")
+    	.text("3. Brazil")
+    	.attr("x", 905)
+    	.attr("y", 140);
+
+//add Sweden highlights
+wl_svg.append('circle')
+    .attr("cx", 172 )
+    .attr("cy", 176 )
+    .attr("r", 5)
+    .attr('fill', 'green')
+    .attr('fill-opacity', 0.5);
+wl_svg.append('line')
+    .style("stroke", "green")
+    .style("stroke-width", 2)
+    .style("stroke-dasharray", ("3, 3"))
+    .style("stroke-opacity", 0.9)
+    .attr("x1", 172)
+    .attr("y1", 176)
+    .attr("x2", 900)
+    .attr("y2", 80); 
+wl_svg.append("text")
+    .attr("dy", ".35em")
+    .style('fill', 'green')
+    .append("tspan")
+    	.text("2. Sweden")
+    	.attr("x", 905)
+    	.attr("y", 80);
+
+
+//Add Germany highlights
+wl_svg.append('circle')
+    .attr("cx", 92 )
+    .attr("cy", 30 )
+    .attr("r", 5)
+    .attr('fill', 'green')
+    .attr('fill-opacity', 0.5);
+wl_svg.append('line')
+    .style("stroke", "green")
+    .style("stroke-width", 2)
+    .style("stroke-dasharray", ("3, 3"))
+    .style("stroke-opacity", 0.9)
+    .attr("x1", 92)
+    .attr("y1", 30)
+    .attr("x2", 900)
+    .attr("y2", 30);
+wl_svg.append("text")
+    .attr("dy", ".35em")
+    .style('fill', 'green')
+    .append("tspan")
+    	.text("1. Germany")
+    	.attr("x", 905)
+    	.attr("y", 30);
+
+//Add Argentina highlights
+wl_svg.append('circle')
+    .attr("cx", 82 )
+    .attr("cy", 218 )
+    .attr("r", 5)
+    .attr('fill', 'green')
+    .attr('fill-opacity', 0.5);
+wl_svg.append('line')
+    .style("stroke", "green")
+    .style("stroke-width", 2)
+    .style("stroke-dasharray", ("3, 3"))
+    .style("stroke-opacity", 0.9)
+    .attr("x1", 82)
+    .attr("y1", 218)
+    .attr("x2", 900)
+    .attr("y2", 180); 
+wl_svg.append("text")
+    .attr("dy", ".35em")
+    .style('fill', 'green')
+    .append("tspan")
+    	.text("4. Argentina")
+    	.attr("x", 905)
+    	.attr("y", 180); 
+
+//Add Hungary highlights
+wl_svg.append('circle')
+    .attr("cx", 252 )
+    .attr("cy", 225 )
+    .attr("r", 5)
+    .attr('fill', 'green')
+    .attr('fill-opacity', 0.5);
+wl_svg.append('line')
+    .style("stroke", "green")
+    .style("stroke-width", 2)
+    .style("stroke-dasharray", ("3, 3"))
+    .style("stroke-opacity", 0.9)
+    .attr("x1", 252)
+    .attr("y1", 225)
+    .attr("x2", 900)
+    .attr("y2", 225); 
+wl_svg.append("text")
+    .attr("dy", ".35em")
+    .style('fill', 'green')
+    .append("tspan")
+    	.text("5. Hungary")
+    	.attr("x", 905)
+    	.attr("y", 225) 
     
 // create the svg
 var win_svg = d3.select("#win_split")
@@ -435,6 +585,36 @@ d3.csv("https://atbasu.github.io/games_win.csv", function(d, i, columns) {
     .attr("font-size", "12px")
     .attr("font-weight", "bold");
 
+// add highlights
+win_svg.append('line')
+    .style("stroke", "green")
+    .style("stroke-width", 2)
+    .style("stroke-dasharray", ("3, 3"))
+    .style("stroke-opacity", 0.9)
+    .attr("x1", 50)
+    .attr("y1", 5)
+    .attr("x2", 150)
+    .attr("y2", 430); 
+win_svg.append("text")
+    .attr("dy", ".35em")
+    .attr("transform", "translate(100,100) rotate(77)")
+    .style('fill', 'green')
+    .text("Dominant teams include all powerhouses");
+
+win_svg.append('line')
+    .style("stroke", "#FF7F50")
+    .style("stroke-width", 2)
+    .style("stroke-dasharray", ("3, 3"))
+    .style("stroke-opacity", 0.9)
+    .attr("x1", 252)
+    .attr("y1", 500)
+    .attr("x2", 960)
+    .attr("y2", 730); 
+win_svg.append("text")
+    .attr("dy", ".35em")
+    .attr("transform", "translate(463,550) rotate(18)")
+    .style('fill', '#FF7F50')
+    .text("Middling teams have a more even spread");
 // create the svg
 var loss_svg = d3.select("#loss_split")
 				.select("svg"),
@@ -536,6 +716,127 @@ d3.csv("https://atbasu.github.io/games_loss.csv", function(d, i, columns) {
       .attr("y", 9.5)
       .attr("dy", "0.32em")
       .text(function(d) { return d; });
+//add Brazil highlights
+loss_svg.append('circle')
+    .attr("cx", 442 )
+    .attr("cy", 475 )
+    .attr("r", 5)
+    .attr('fill', 'green')
+    .attr('fill-opacity', 0.5);
+loss_svg.append('line')
+    .style("stroke", "green")
+    .style("stroke-width", 2)
+    .style("stroke-dasharray", ("3, 3"))
+    .style("stroke-opacity", 0.9)
+    .attr("x1", 442)
+    .attr("y1", 475)
+    .attr("x2", 900)
+    .attr("y2", 140); 
+loss_svg.append("text")
+    .attr("dy", ".35em")
+    .style('fill', 'green')
+    .append("tspan")
+    	.text("3. Brazil")
+    	.attr("x", 905)
+    	.attr("y", 140);
+
+//add Sweden highlights
+loss_svg.append('circle')
+    .attr("cx", 82 )
+    .attr("cy", 218 )
+    .attr("r", 5)
+    .attr('fill', '#FF7F50')
+    .attr('fill-opacity', 0.5);
+loss_svg.append('line')
+    .style("stroke", "#FF7F50")
+    .style("stroke-width", 2)
+    .style("stroke-dasharray", ("3, 3"))
+    .style("stroke-opacity", 0.9)
+    .attr("x1", 82)
+    .attr("y1", 218)
+    .attr("x2", 900)
+    .attr("y2", 80); 
+loss_svg.append("text")
+    .attr("dy", ".35em")
+    .style('fill', '#FF7F50')
+    .append("tspan")
+    	.text("2. Sweden")
+    	.attr("x", 905)
+    	.attr("y", 80);
+
+
+//Add Germany highlights
+loss_svg.append('circle')
+    .attr("cx", 82 )
+    .attr("cy", 218 )
+    .attr("r", 5)
+    .attr('fill', '#FF7F50')
+    .attr('fill-opacity', 0.5);
+loss_svg.append('line')
+    .style("stroke", "#FF7F50")
+    .style("stroke-width", 2)
+    .style("stroke-dasharray", ("3, 3"))
+    .style("stroke-opacity", 0.9)
+    .attr("x1", 82)
+    .attr("y1", 218)
+    .attr("x2", 900)
+    .attr("y2", 30);
+loss_svg.append("text")
+    .attr("dy", ".35em")
+    .style('fill', '#FF7F50')
+    .append("tspan")
+    	.text("1. Germany")
+    	.attr("x", 905)
+    	.attr("y", 30);
+
+//Add Argentina highlights
+loss_svg.append('circle')
+    .attr("cx", 230 )
+    .attr("cy", 375 )
+    .attr("r", 5)
+    .attr('fill', 'green')
+    .attr('fill-opacity', 0.5);
+loss_svg.append('line')
+    .style("stroke", "green")
+    .style("stroke-width", 2)
+    .style("stroke-dasharray", ("3, 3"))
+    .style("stroke-opacity", 0.9)
+    .attr("x1", 230)
+    .attr("y1", 375)
+    .attr("x2", 900)
+    .attr("y2", 180); 
+loss_svg.append("text")
+    .attr("dy", ".35em")
+    .style('fill', 'green')
+    .append("tspan")
+    	.text("4. Argentina")
+    	.attr("x", 905)
+    	.attr("y", 180); 
+
+//Add Hungary highlights
+loss_svg.append('circle')
+    .attr("cx", 82 )
+    .attr("cy", 218 )
+    .attr("r", 5)
+    .attr('fill', '#FF7F50')
+    .attr('fill-opacity', 0.5);
+loss_svg.append('line')
+    .style("stroke", "#FF7F50")
+    .style("stroke-width", 2)
+    .style("stroke-dasharray", ("3, 3"))
+    .style("stroke-opacity", 0.9)
+    .attr("x1", 82)
+    .attr("y1", 218)
+    .attr("x2", 900)
+    .attr("y2", 225); 
+loss_svg.append("text")
+    .attr("dy", ".35em")
+    .style('fill', '#FF7F50')
+    .append("tspan")
+    	.text("5. Hungary")
+    	.attr("x", 905)
+    	.attr("y", 225) 
+
 });
 
   // Prep the tooltip bits, initial display is hidden
